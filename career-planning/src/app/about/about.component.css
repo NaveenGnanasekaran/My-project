@@ -1,0 +1,12 @@
+.about {
+    background-color: darkkhaki;
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    width: 200vh;
+    margin-left: 8vh;
+    border-radius: 20px;
+}
+
+.about img {
+    border-radius: 20px;
+}

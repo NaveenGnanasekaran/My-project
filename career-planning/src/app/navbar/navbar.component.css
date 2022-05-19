@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+
+body {
+    font-family: 'PT Serif', serif;
+    background-color: black;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    position: relative;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-weight: 400;
+    /* border-bottom: black solid; */
+    /* box-shadow: 2px 2px 5px black; */
+}
+
+li {
+    float: right;
+}
+
+h1 {
+    font-size: 35px;
+    /* font-family: 'Poppins', sans-serif; */
+
+    color: white;
+    font-weight: 700;
+}
+
+li a {
+    display: block;
+    color: rgb(252, 249, 249);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+/* 
+li .a1 {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+} */
+
+
+
+a:hover {
+    background-color: steelblue;
+}
+
+.active {
+    border-bottom: red solid 5px;
+    /* border: black solid; */
+    /* border-radius: 12px; */
+
+
+}
+
+button {
+    width: 120px;
+    border: none;
+    padding: 0px;
+    background-color: rgb(17, 15, 15);
+    color: white;
+}
+
+button a {
+    /* color: black; */
+}

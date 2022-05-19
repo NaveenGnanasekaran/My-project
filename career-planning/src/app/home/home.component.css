@@ -1,0 +1,173 @@
+.header {
+    /* background-color: #17bee8; */
+    /* padding: 100px; */
+    background-color: darkkhaki;
+    /* min-height: 90vh; */
+}
+
+.header img {
+    /* padding-top: 4px; */
+    width: 100%;
+}
+
+.header span {
+    color: red;
+}
+
+.header h1 {
+    position: absolute;
+    top: 30vh;
+    left: 3rem;
+    padding-top: 30px;
+    text-align: center;
+    color: black;
+    font-size: 5rem;
+}
+
+
+.header h1:hover {
+    text-decoration: underline black;
+    transition: .3s ease infinite;
+    text-shadow: 3px 2px 5px black;
+}
+
+.header h3 {
+    padding: 50px;
+    text-align: center;
+    opacity: 0.8;
+    height: 30vh;
+    margin-top: 40px;
+}
+
+.outer {
+    /* background-color: rgb(255, 68, 0); */
+    background-color: black;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-left: 100px;
+
+
+    /* background-color: orange; */
+}
+
+.outer .w h2 {
+    color: white;
+    text-align: center;
+    padding-top: 5rem;
+    font-weight: 800;
+    font-size: 12vh;
+}
+
+.outer span {
+    color: red;
+    font-size: 30vh;
+}
+
+.card1:hover {
+    /* border: solid red 5px; */
+    border-radius: 30px;
+}
+
+.card1 {
+    background-color: yellow;
+    border: solid black 7px;
+    height: 50vh;
+    width: 30vw;
+    padding: 30px;
+    margin: 80px;
+    /* background-color: white; */
+    /* display: block; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.card1 img {
+    height: 70px;
+    width: 70px;
+    margin-left: 130px;
+    margin-bottom: 20px;
+}
+
+.card1 h3 {
+    margin-left: 100px;
+}
+
+.card1 h6 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.card1 button {
+    margin-top: 30px;
+    width: 100%;
+    background-color: black;
+    height: 3rem;
+    border-radius: 20px;
+}
+
+.card2 button {
+    /* margin-left: 130px; */
+    margin-top: 15px;
+    border-radius: 20px;
+    width: 100%;
+    background-color: black;
+    height: 3rem;
+}
+
+.card2 h6 {
+    margin-left: 20px;
+}
+
+.card2:hover {
+    /* border: solid red 5px; */
+    border-radius: 30px;
+}
+
+.card2 {
+    border: solid black 7px;
+    background-color: yellow;
+
+
+    height: 50vh;
+    width: 30vw;
+    padding: 30px;
+    margin: 80px;
+
+}
+
+.card2 img {
+    height: 70px;
+    width: 70px;
+    margin-left: 130px;
+    margin-bottom: 20px;
+}
+
+.card2 h3 {
+    margin-left: 40px;
+}
+
+.desc {
+    background-color: darkkhaki;
+    height: 50vh;
+}
+
+.desc h2 {
+    text-align: center;
+    padding: 30px;
+    text-transform: uppercase;
+    opacity: 0.9;
+    font-weight: 800;
+}
+
+.desc p {
+    padding: 0px 60px 0px 60px;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+/* -------------------------------- */
