@@ -1,7 +1,7 @@
 .header {
     /* background-color: #17bee8; */
     /* padding: 100px; */
-    background-color: darkkhaki;
+    background-color: skyblue;
     /* min-height: 90vh; */
 }
 
@@ -11,7 +11,10 @@
 }
 
 .header span {
-    color: red;
+    color: #0072FF;
+    text-shadow: 3px 2px 5px black;
+    /* text-decoration-color: black; */
+
 }
 
 .header h1 {
@@ -22,14 +25,36 @@
     text-align: center;
     color: black;
     font-size: 5rem;
+    text-shadow: 3px 2px 5px black;
+
+
+}
+
+button {
+    position: absolute;
+    top: 70vh;
+    left: 20rem;
+    background-color: black;
+    border: none;
+    /* border: solid black; */
+    color: #0072FF;
+    font-size: 30px;
+    width: 15rem;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+button:hover {
+    background-color: white;
+    color: black;
 }
 
 
-.header h1:hover {
+/* .header h1:hover {
     text-decoration: underline black;
     transition: .3s ease infinite;
     text-shadow: 3px 2px 5px black;
-}
+} */
 
 .header h3 {
     padding: 50px;
@@ -73,7 +98,7 @@
 }
 
 .card1 {
-    background-color: yellow;
+    background-color: white;
     border: solid black 7px;
     height: 50vh;
     width: 30vw;
@@ -129,7 +154,7 @@
 
 .card2 {
     border: solid black 7px;
-    background-color: yellow;
+    background-color: white;
 
 
     height: 50vh;
@@ -151,7 +176,7 @@
 }
 
 .desc {
-    background-color: darkkhaki;
+    background-color: white;
     height: 50vh;
 }
 

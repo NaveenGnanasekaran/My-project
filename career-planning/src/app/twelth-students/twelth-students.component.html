@@ -1,0 +1,81 @@
+<div class="container">
+    <h1>After 12th?</h1>
+    <div class="content">
+        <p>The <span>best time</span> to take a career aptitude test is after 10th and 12th, before you’ve chosen your
+            career. That’s
+            when things are less messy and the field is wide open to choose the relevant stream (science, commerce,
+            arts, business etc) and right graduation degree.</p>
+
+        <p>There are more career options after 10th and 12th before the broad career track has been chosen, than after
+            graduation when the flexibility gets limited to the degree you get.</p>
+        <p>But high school students are also more vulnerable. Subjected to parental and peer pressure, many end up
+            taking careers just because they’ve been told to do so.</p>
+        <p>Which is why we see the familiar and disturbing trend of parents pushing students to join entrance exams for
+            several years. They assume sacrificing their childhood will someday bear fruit and get them happiness in
+            life and career. But by the time students realize it, they’re stuck in the quicksand.</p>
+        <p>
+            Teens and students who take career tests after 10th and 12th are likely to be more aware of their choices.
+        </p>
+        <p>If you’ve gone beyond the high school, completed your college and already feel stuck in a bad career, it’s
+            never too late. We have a free online aptitude test to help you get some basic answers.</p>
+        <p>Our career finder for students and professionals has helped thousands of career explorers find the right
+            career path for themselves. The result is shown as a simple chart and a list of careers, that easy to
+            interpret and understand.</p>
+    </div>
+    <div class="content2">
+        <h1>Career Finidng Test</h1>
+        <img src="../../images/test.jpg">
+        <h2>Test Instructions</h2>
+        <p>This test consists of some questions that you will have to rate on the basis of how much you would enjoy
+            performing each on a scale of (1) strongly dislike (2) slightly dislike (3) neither like nor dislike (4)
+            slightly enjoy (5) strongly enjoy. This test will help you choose a career path based on your personality
+            type and your interests in a particular field or subject.</p>
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Find your
+            carrier!</button>
+
+    </div>
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Sign Up</h1>
+                <p>Please fill in this form to create an account.</p>
+                <hr>
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+                <label>
+                    <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                </label>
+
+                <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</div>

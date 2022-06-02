@@ -1,0 +1,133 @@
+.container {
+    background-color: white;
+    max-width: 1440px;
+}
+
+
+
+.cardsc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.parab {
+    margin-bottom: 80px;
+    font-size: 20px;
+    padding: 40px;
+    margin-left: 30px;
+
+}
+
+.parab img {
+    width: 100%;
+    margin-top: 40px;
+    border-radius: 40px;
+}
+
+.parac,
+.parad {
+    margin-bottom: 200px;
+    font-size: 20px;
+    padding: 40px;
+    margin-left: 30px;
+}
+
+
+.paraa {
+    margin-bottom: 50px;
+}
+
+.intro {
+    margin-bottom: 10px;
+    font-size: 20px;
+    padding: 40px;
+    margin-left: 30px;
+    margin-top: -100px;
+}
+
+.parad .parae p {
+    margin-top: 30px;
+}
+
+.parad img {
+    width: 100%;
+    border-radius: 40px;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    padding-top: 30px;
+    text-shadow: 2px 2px 5px black;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+span {
+    color: red;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.span span {
+    color: red;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-shadow: 20px 20px 100px;
+    letter-spacing: 10px;
+    margin-left: 30px;
+
+}
+
+.span h1 {
+    letter-spacing: 10px;
+    color: black;
+    text-shadow: 20px 20px 100px;
+}
+
+.cardsc {
+    padding: 40px;
+
+}
+
+.card {
+    background-color: black;
+    color: white;
+    /* border: solid black; */
+    border-radius: 20px;
+    box-shadow: 20px 20px 50px black;
+}
+
+.card img {
+    border-radius: 12px 12px 0px 0px;
+}
+
+h5 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#twelve {
+    margin-top: 15px;
+    margin-left: 60px;
+    /* background-color: rebeccapurple; */
+}
+
+a {
+    margin-top: 10px;
+    margin-left: 70px;
+    background-color: skyblue;
+    color: black;
+    font-size: 20px;
+}
+
+/* #twelve {
+    margin-top: 30px
+} */

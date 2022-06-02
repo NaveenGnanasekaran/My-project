@@ -1,0 +1,81 @@
+.container {
+    /* background-color: gray; */
+    max-width: 1400px;
+    overflow: hidden;
+    background-color: #eaeced;
+}
+
+.container .heading h1 {
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+    padding-top: 30px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.container .content {
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.container .content p {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 40px;
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+.container .blog-tutorials {
+    /* background-color: gray; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    margin-left: 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 50px;
+    width: 300px;
+    text-align: center;
+}
+
+.container .blog-tutorials div {
+    background-color: black;
+    border-radius: 20px 20px 20px 20px;
+    color: white;
+}
+
+.cord {
+    transition: ease 0.2s;
+}
+
+.cord:hover {
+    transform: scale(1.1);
+}
+
+.container .blog-tutorials div img {
+    border-radius: 20px 20px 0px 0px;
+    transition: transform .2s;
+
+}
+
+.container .blog-tutorials a {
+    color: white;
+}
+
+
+/* .blog-tutorials img:hover {
+    transform: scale(1.2);
+} */
+
+
+.head {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}

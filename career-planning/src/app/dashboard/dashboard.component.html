@@ -1,0 +1,27 @@
+<div class="container">
+    <h1><i>Dashboard</i></h1>
+    <div class="fetch">
+        <table class="table">
+            <thead class="text-dark">
+                <tr>
+                    <th scope="col">Email id</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">delete</th>
+
+                </tr>
+            </thead>
+            <tbody class="text-dark">
+                <tr *ngFor="let obj of object">
+                    <td scope="row">{{obj.email}}</td>
+                    <td scope="row">{{obj.password}}</td>
+
+                    <td scope="row"><button class="delete" (click)="deleteuser(obj,obj)">Delete</button></td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <button (click)="getuser()">fetch</button>
+    <!-- <button (click)="logout()">Logout</button> -->
+
+</div>

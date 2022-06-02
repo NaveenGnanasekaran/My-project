@@ -1,0 +1,49 @@
+.container h1 {
+    padding-top: 30px;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    color: black;
+    text-shadow: 2px 2px 5px black;
+    text-transform: uppercase;
+
+}
+
+.content {
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    background-color: white;
+    color: black;
+    box-shadow: 20px 20px 80px black;
+}
+
+.content img {
+    height: 20rem;
+    width: 30rem;
+    padding: 10px;
+}
+
+span {
+    color: red;
+}
+
+h6 {
+    font-weight: 800;
+}
+
+p {
+    width: 700px;
+    font-size: 32px;
+    padding: 40px;
+}
+
+button {
+    width: 120px;
+    height: 30px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}

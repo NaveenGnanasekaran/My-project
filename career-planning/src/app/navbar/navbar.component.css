@@ -11,6 +11,16 @@ body {
     align-items: center;
 }
 
+.content img {
+    height: 50px;
+    width: 50px;
+    padding: none;
+}
+
+.content h1 {
+    font-weight: 800;
+}
+
 ul {
     position: relative;
     width: 100%;
@@ -46,6 +56,13 @@ li a {
     font-size: 15px;
 }
 
+li img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
 /* 
 li .a1 {
     display: block;
@@ -58,19 +75,22 @@ li .a1 {
 
 
 a:hover {
-    background-color: steelblue;
+    /* border: white solid; */
+    background-color: yellow;
 }
 
 .active {
-    border-bottom: red solid 5px;
+    /* border: white solid 5px; */
+    /* border-radius: 50%; */
     /* border: black solid; */
     /* border-radius: 12px; */
+    background-color: white;
 
 
 }
 
 button {
-    width: 120px;
+    /* width: 120px; */
     border: none;
     padding: 0px;
     background-color: rgb(17, 15, 15);

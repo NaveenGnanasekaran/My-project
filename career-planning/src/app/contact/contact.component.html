@@ -1,10 +1,57 @@
-<div>
-    <h4>
-        Address:<br><br>
-        AR Hospital & Research Center<br>
-        180, Anna Nagar, Chennai.<br>
-        Contact No - 9876543210<br>
-        Email: AR@hospital.com<br>
-    </h4>
-</div>
-<app-footer></app-footer>
+<div class="contact">
+    <h1><i>contact us</i></h1>
+    <p>Communication is the more important for the every field.Communication involves the concept of transfer of
+        information. It is merely the act of sharing common ideas between individuals that are a part of the
+        conversation. It forms an understanding from the sender to the receiver and vice versa. It is essential to carry
+        out the process convincingly and meaningfully to develop an ideal conversation with communication. The act of
+        communication is also known as the process of passing information in oral or written form.
+
+    </p>
+    <img src="../../images/communication3.jpg">
+
+    <p>It is the transfer of a person’s thoughts in the way of talking or writing to another person. Communication has
+        four actions that are, encoding, sending, receiving, and decoding. The sender encodes the information and
+        transfers it to the receiver. The receiver gains the information from the sender, decodes it, and understands
+        the message or information received. The message forms the content of the communication.</p>
+    <div class="container">
+        <div class="image">
+            <img src="../../images/phone.avif">
+        </div>
+        <div class="form">
+            <h1><i>Reach us</i></h1>
+            <form action="#" [formGroup]="contactform" (ngSubmit)="adduser(this.contactform.value)">
+                <!-- <div class="log">
+                        <h3>SIGNUP</h3>
+                    </div> -->
+                <div class="field-group">
+                    <label for="name">Name</label>
+                    <input name='name' id="name" value="" type="text" placeholder="Full Name" formControlName="name"
+                        class="form-control" required>
+                </div>
+                <div class="field-group">
+                    <label for="Email">Email</label>
+                    <input name='Email' id="Email" value="" type="email" placeholder="Email Address"
+                        formControlName="email" class="form-control" required>
+                </div>
+                <div class="field-group">
+                    <label for="phone">Phone</label>
+                    <input name='phone' id="phone" value="" type="number" placeholder="enter your number"
+                        formControlName="phone" class="form-control" required>
+                </div>
+                <!-- <div class="field-group">
+                    <label for="password">Password</label>
+                    <input name='password' id="password" value="" type="password" placeholder="Password"
+                        formControlName="password" class="form-control" required>
+                </div> -->
+                <div class="field-group">
+                    <label for="txt">Feedback</label>
+                    <textarea name="txt" id="txt" value="" type="text" placeholder="Type your feedback here..!"
+                        formControlName="txt" class="form-control" required></textarea>
+                </div>
+                <button id="send" type="submit" class="submit" [disabled]="contactform.invalid">Submit</button>
+            </form>
+
+        </div>
+    </div>
+    <app-footer></app-footer>
+    <!-- <button id="send" type="submit" class="submit" [disabled]="contactform.invalid">Submit</button> -->

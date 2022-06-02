@@ -9,8 +9,12 @@ import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { PartnershipsComponent } from './partnerships/partnerships.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
-
+import { AdminComponent } from './admin/admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { SolutionPart2Component } from './solution-part2/solution-part2.component';
+import { TenthStudentsComponent } from './tenth-students/tenth-students.component';
+import { TwelthStudentsComponent } from './twelth-students/twelth-students.component';
+import { CollegeStudentsComponent } from './college-students/college-students.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'solution', component: SolutionComponent },
@@ -20,6 +24,12 @@ const routes: Routes = [
   { path: 'partnerships', component: PartnershipsComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'admin', component: AdminComponent },
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'solution2', component: SolutionPart2Component },
+  { path: 'tenth', component: TenthStudentsComponent },
+  { path: 'twelth', component: TwelthStudentsComponent },
+  { path: 'college', component: CollegeStudentsComponent },
 
 ];
 

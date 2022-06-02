@@ -1,19 +1,32 @@
-.bg-image-vertical {
-    position: relative;
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-position: right center;
-    background-size: auto 100%;
+button a {
+    text-decoration: none;
+    font-weight: 800;
+    color: red;
+    font-size: 30px;
 }
 
-@media (min-width: 1025px) {
-    .h-custom-2 {
-        height: 100%;
-    }
+form {
+    margin: 50px;
 }
 
-section {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    /* margin-bottom: 30px; */
+h1 {
+    font-size: 100px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    padding-top: 30px;
+    text-shadow: 2px 2px 5px black;
+
+
+}
+
+body {
+    background-color: skyblue;
+}
+
+button {
+    background-color: black;
+    color: white;
+    margin-top: 50px;
 }
