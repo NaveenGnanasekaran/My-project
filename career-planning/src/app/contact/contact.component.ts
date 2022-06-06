@@ -25,14 +25,12 @@ export class ContactComponent implements OnInit {
       email: new FormControl(''),
       txt: new FormControl(''),
       phone: new FormControl('')
-      // password: new FormControl(''),
     });
   }
   onSubmit(form: FormGroup) {
     this.submitted = true;
     console.log('Valid?', form.valid); // true or false
     console.log('Email', form.value.email);
-    // console.log('Password', form.value.password);
   }
   onReset() {
     this.submitted = false;
@@ -42,7 +40,6 @@ export class ContactComponent implements OnInit {
     console.log(Formvalue);
     this.api.add(Formvalue).subscribe(data => {
       console.log(data);
-      // alert("data added");
     })
     alert("data added");
   }

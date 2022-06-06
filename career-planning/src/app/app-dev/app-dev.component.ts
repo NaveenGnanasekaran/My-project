@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppDevComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('app-dev');
+
+  }
 
   ngOnInit(): void {
+    console.log('app-dev');
+
   }
 
 }

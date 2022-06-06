@@ -8,7 +8,6 @@ import { BookeryComponent } from './bookery/bookery.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { PartnershipsComponent } from './partnerships/partnerships.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SolutionPart2Component } from './solution-part2/solution-part2.component';

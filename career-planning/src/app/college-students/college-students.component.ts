@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import { ApiServiceService } from '../api-service.service';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -43,30 +43,13 @@ export class CollegeStudentsComponent implements OnInit {
     this.careerform.reset();
     console.log('data get reloaded');
     this.router.navigate(['/webdev'])
-    // window.location.reload();
     this.api.testdata(Formvalue).subscribe((data) => {
       console.log(data);
-      // const java = this.careerform.value('java');
-      // console.log(java);
+
 
     });
 
-    // this.router.navigate(['/about']);
-    // function add() {
-    //   if (this.javascript.value)>= 50px
-    //     ;
-    // }
-
-  }
-  getvalue(Formvalue: NgForm) {
-
 
 
   }
-  // adminFormsData(Formvalue: NgForm) {
-
-  //   if (Formvalue. > 50) {
-  //     this.router.navigate(['/about'])
-
-  //   }
 }

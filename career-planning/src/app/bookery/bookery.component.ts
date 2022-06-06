@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookeryComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('bookery');
+  }
 
   ngOnInit(): void {
+    console.log('bookery');
+
   }
 
 }
