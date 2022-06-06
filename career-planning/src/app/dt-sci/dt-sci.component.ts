@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DtSciComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('datascience');
+  }
 
   ngOnInit(): void {
+    console.log('datascience');
+
   }
 
 }

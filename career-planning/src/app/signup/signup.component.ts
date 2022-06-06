@@ -1,69 +1,3 @@
-// import { Component, OnInit } from '@angular/core';
-// import { FormControl, FormGroup, FormBuilder, NgForm } from '@angular/forms';
-// import { ApiServiceService, } from '../api-service.service';
-// import { emailMatchValidator, rangeValidator } from '../my-validator';
-// import { Router } from '@angular/router';
-
-// @Component({
-//     selector: 'app-signup',
-//     templateUrl: './signup.component.html',
-//     styleUrls: ['./signup.component.css']
-// })
-// export class SignupComponent implements OnInit {
-//     myForm: FormGroup;
-//     submitted = false;
-//     alldata: any;
-//     object: any = [];
-//     router: any;
-
-
-//     constructor(private api: ApiServiceService, private build: FormBuilder) {
-//         this.myForm = this.build.group({
-//             fname: [''],
-//             lname: [''],
-//             username: [''],
-//             email: [''],
-//             password: ['']
-//         });
-
-//     }
-// ngOnInit(): void {
-//     this.myForm = new FormGroup({
-//         fname: new FormControl(''),
-//         lname: new FormControl(''),
-//         username: new FormControl(''),
-//         email: new FormControl(''),
-//         password: new FormControl(''),
-//     });
-// }
-// onSubmit(form: FormGroup) {
-//     this.submitted = true;
-//     console.log('Valid?', form.valid); // true or false
-//     console.log('Email', form.value.email);
-//     console.log('Password', form.value.password);
-// }
-// onReset() {
-//     this.submitted = false;
-//     this.myForm.reset();
-// }
-// adduser(Formvalue: NgForm) {
-//     console.log(Formvalue);
-
-//     this.api.add(Formvalue).subscribe(data => {
-// if (data.docs.length > 0) {
-//     this.router.navigate(['home'], {});
-// }
-// console.log(data);
-
-
-// alert("data added");
-//         })
-
-//         alert("data posted!")
-//     }
-
-
-// }
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import { ApiServiceService } from '../api-service.service';
@@ -91,7 +25,6 @@ export class SignupComponent implements OnInit {
             password: ['', Validators.required],
             confirmpassword: ['', Validators.required],
         });
-        // console.log(this.registerform);
     }
     register(Formvalue: NgForm) {
         console.log(Formvalue);

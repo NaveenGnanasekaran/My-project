@@ -35,7 +35,6 @@ export class CollegeStudentsComponent implements OnInit {
       objc: ['', Validators.required],
       java: ['', Validators.required],
     });
-    // console.log(this.registerform);
   }
   career(Formvalue: NgForm) {
     console.log(Formvalue);

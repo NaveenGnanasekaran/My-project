@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MobDevComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('mob-dev');
+  }
 
   ngOnInit(): void {
+    console.log('mob-dev');
+
   }
 
   toggleDarkTheme(): void {

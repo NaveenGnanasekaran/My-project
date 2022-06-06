@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartnershipsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('partnerships');
+
+  }
 
   ngOnInit(): void {
+    console.log('partnerships');
+
   }
 
 }

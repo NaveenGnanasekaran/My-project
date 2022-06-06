@@ -1,7 +1,10 @@
 .container {
     max-width: 1440px;
+    padding: 16px;
     background-color: yellow;
 }
+
+
 
 h1 {
     font-size: 50px;
@@ -117,9 +120,6 @@ button:hover {
 }
 
 /* Add padding to container elements */
-.container {
-    padding: 16px;
-}
 
 /* The Modal (background) */
 .modal {

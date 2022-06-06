@@ -9,6 +9,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 40px;
+
 
 }
 
@@ -91,10 +93,7 @@ span {
     text-shadow: 20px 20px 100px;
 }
 
-.cardsc {
-    padding: 40px;
 
-}
 
 .card {
     background-color: black;

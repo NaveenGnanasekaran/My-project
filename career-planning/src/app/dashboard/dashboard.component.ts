@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, NgForm, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, NgForm, FormControl } from '@angular/forms';
 import { ApiServiceService } from '../api-service.service';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dasboard',
@@ -42,7 +41,6 @@ export class DashboardComponent implements OnInit {
     console.log(Formvalue);
     this.api.add(Formvalue).subscribe(data => {
       console.log(data);
-      //alert("data added");
     })
     alert('data poted succesfully');
   }
@@ -103,8 +101,7 @@ export class DashboardComponent implements OnInit {
 }
 
 
-// import { basename } from 'path';
-// import { generateKeyPair } from 'crypto';
+
 
 // @Component({
 //   selector: 'app-loginform',

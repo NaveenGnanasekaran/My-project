@@ -7,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwelthStudentsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('twelth');
+  }
 
   ngOnInit(): void {
+    console.log('twelth');
   }
 
 }

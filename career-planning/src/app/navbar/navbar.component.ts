@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('navbar');
+
+  }
 
   ngOnInit(): void {
+    console.log('navbar');
+
   }
 
 }

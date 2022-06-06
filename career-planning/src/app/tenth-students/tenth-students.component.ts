@@ -8,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TenthStudentsComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    console.log('tenth');
+  }
 
   ngOnInit(): void {
+    console.log('tenth');
   }
 
 }

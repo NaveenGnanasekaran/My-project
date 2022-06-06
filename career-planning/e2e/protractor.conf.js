@@ -22,7 +22,7 @@ exports.config = {
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
-    print: function () { /* TODO document why this method 'print' is empty */ }
+    print: function () { /*  document why this method 'print' is empty */ }
   },
   onPrepare() {
     require('ts-node').register({
