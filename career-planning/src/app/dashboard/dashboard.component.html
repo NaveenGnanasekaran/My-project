@@ -12,10 +12,10 @@
             </thead>
             <tbody class="text-dark">
                 <tr *ngFor="let obj of object">
-                    <td scope="row">{{obj.email}}</td>
-                    <td scope="row">{{obj.password}}</td>
+                    <td>{{obj.email}}</td>
+                    <td>{{obj.password}}</td>
 
-                    <td scope="row"><button class="delete" (click)="deleteuser(obj,obj)">Delete</button></td>
+                    <td><button class="delete" (click)="deleteuser(obj,obj)">Delete</button></td>
 
                 </tr>
             </tbody>
