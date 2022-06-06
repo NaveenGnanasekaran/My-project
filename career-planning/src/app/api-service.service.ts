@@ -39,6 +39,9 @@ export class ApiServiceService {
   signupdata(formobject: any) {
     return this.http.post('http://localhost:8000/postquery', formobject);
   }
+  testdata(formobject: any) {
+    return this.http.post('http://localhost:8000/testquery', formobject);
+  }
   billingdata(formobject: any) {
     return this.http.post('http://localhost:8000/post_query', formobject);
   }

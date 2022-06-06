@@ -6,7 +6,8 @@ button a {
 }
 
 form {
-    margin: 50px;
+    /* margin: 50px; */
+    min-height: 30vh;
 }
 
 h1 {
@@ -23,6 +24,7 @@ h1 {
 
 body {
     background-color: skyblue;
+    min-height: 100vh;
 }
 
 button {

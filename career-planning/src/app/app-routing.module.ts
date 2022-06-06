@@ -15,6 +15,10 @@ import { SolutionPart2Component } from './solution-part2/solution-part2.componen
 import { TenthStudentsComponent } from './tenth-students/tenth-students.component';
 import { TwelthStudentsComponent } from './twelth-students/twelth-students.component';
 import { CollegeStudentsComponent } from './college-students/college-students.component';
+import { WebDevComponent } from './web-dev/web-dev.component';
+import { MobDevComponent } from './mob-dev/mob-dev.component';
+import { DtSciComponent } from './dt-sci/dt-sci.component';
+import { AppDevComponent } from './app-dev/app-dev.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'solution', component: SolutionComponent },
@@ -30,6 +34,11 @@ const routes: Routes = [
   { path: 'tenth', component: TenthStudentsComponent },
   { path: 'twelth', component: TwelthStudentsComponent },
   { path: 'college', component: CollegeStudentsComponent },
+  { path: 'webdev', component: WebDevComponent },
+  { path: 'appdev', component: AppDevComponent },
+  { path: 'mobdev', component: MobDevComponent },
+  { path: 'dtsci', component: DtSciComponent },
+
 
 ];
 

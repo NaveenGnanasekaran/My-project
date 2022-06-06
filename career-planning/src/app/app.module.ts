@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -21,6 +20,10 @@ import { TenthStudentsComponent } from './tenth-students/tenth-students.componen
 import { TwelthStudentsComponent } from './twelth-students/twelth-students.component';
 import { CollegeStudentsComponent } from './college-students/college-students.component';
 import { SolutionPart2Component } from './solution-part2/solution-part2.component';
+import { WebDevComponent } from './web-dev/web-dev.component';
+import { AppDevComponent } from './app-dev/app-dev.component';
+import { MobDevComponent } from './mob-dev/mob-dev.component';
+import { DtSciComponent } from './dt-sci/dt-sci.component';
 
 
 @NgModule({
@@ -41,7 +44,11 @@ import { SolutionPart2Component } from './solution-part2/solution-part2.componen
     TenthStudentsComponent,
     TwelthStudentsComponent,
     CollegeStudentsComponent,
-    SolutionPart2Component
+    SolutionPart2Component,
+    WebDevComponent,
+    AppDevComponent,
+    MobDevComponent,
+    DtSciComponent
   ],
   imports: [
     BrowserModule,
