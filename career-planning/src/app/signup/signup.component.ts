@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { ApiServiceService } from '../api-service.service';
 
 @Component({
@@ -13,7 +14,8 @@ export class SignupComponent implements OnInit {
 
     constructor(
         private formbuilder: FormBuilder,
-        private api: ApiServiceService
+        private api: ApiServiceService,
+        private router: Router
     ) { }
 
     ngOnInit(): void {
@@ -31,9 +33,11 @@ export class SignupComponent implements OnInit {
         alert('Your Data Posted....');
         this.registerform.reset();
         console.log('data get reloaded');
-        window.location.reload();
+        this.router.navigate(['/login']);
+
         this.api.signupdata(Formvalue).subscribe((data) => {
             console.log(data);
+
         });
     }
 }

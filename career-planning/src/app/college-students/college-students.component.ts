@@ -15,6 +15,9 @@ export class CollegeStudentsComponent implements OnInit {
   object: any = [];
   alldata: any;
   flag = 0;
+  total1: any;
+  total2: any;
+  total3: any;
 
   constructor(
     private formbuilder: FormBuilder,
@@ -29,19 +32,43 @@ export class CollegeStudentsComponent implements OnInit {
       css: ['', Validators.required],
       c: ['', Validators.required],
       matlab: ['', Validators.required],
-      pyhon: ['', Validators.required],
-      android: ['', Validators.required],
+      python: ['', Validators.required],
+      // android: ['', Validators.required],
       swift: ['', Validators.required],
       objc: ['', Validators.required],
       java: ['', Validators.required],
     });
   }
-  career(Formvalue: NgForm) {
-    console.log(Formvalue);
-    alert('Your Data Posted....');
+  career(Formvalue: any) {
+    // console.log(Formvalue.java);
+    this.total1 = parseInt(Formvalue.javascript) + parseInt(Formvalue.html) + parseInt(Formvalue.css);
+    this.total2 = parseInt(Formvalue.c) + parseInt(Formvalue.python) + parseInt(Formvalue.matlab);
+    this.total3 = parseInt(Formvalue.swift) + parseInt(Formvalue.objc) + parseInt(Formvalue.java);
+    console.log(this.total1);
+    console.log(this.total2);
+    console.log(this.total3);
+
+    if (this.total1 > this.total2 && this.total1 > this.total3) {
+      alert('Your Data Posted....');
+      this.router.navigate(['/webdev']);
+    }
+    else if (this.total2 > this.total3 && this.total2 > this.total1) {
+      alert('Your Data Posted....');
+      this.router.navigate(['/dtsci']);
+    }
+    else if (this.total3 > this.total1 && this.total3 > this.total2) {
+      alert('Your Data Posted....');
+
+      this.router.navigate(['/appdev'])
+    }
+
+    else {
+      alert('Please provide your real marks.. ')
+      // this.router.navigate(['/home'])
+    }
     this.careerform.reset();
     console.log('data get reloaded');
-    this.router.navigate(['/webdev'])
+    // this.router.navigate(['/webdev'])
     this.api.testdata(Formvalue).subscribe((data) => {
       console.log(data);
 

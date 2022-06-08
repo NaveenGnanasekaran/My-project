@@ -5,12 +5,18 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ApiServiceService {
-
+  hide: boolean = false;
+  show: boolean = true;
   constructor(private http: HttpClient) { }
   add(formobject: any) {
     console.log("abdc");
     return this.http.post("http://localhost:8000/signup", formobject)
 
+  }
+  showoff() {
+    this.hide = !this.hide;
+    this.show = !this.show;
+    console.log(this.show)
   }
   // add1(formobject: any) {
   // console.log("abdc");
@@ -42,12 +48,13 @@ export class ApiServiceService {
   testdata(formobject: any) {
     return this.http.post('http://localhost:8000/testquery', formobject);
   }
-  billingdata(formobject: any) {
-    return this.http.post('http://localhost:8000/post_query', formobject);
+  tenthdata(formobject: any) {
+    return this.http.post('http://localhost:8000/tenthquery', formobject);
   }
-  feedbackdata(formobject: any) {
-    return this.http.post('http://localhost:8000/post__query', formobject);
+  twelthdata(formobject: any) {
+    return this.http.post('http://localhost:8000/twelthquery', formobject);
   }
+
 
   getUser() {
     return this.http.get('http://localhost:8000/getUser/');
@@ -56,13 +63,9 @@ export class ApiServiceService {
     return this.http.get(`http://localhost:8000/getUserId/${id}`);
   }
 
-  getbill() {
-    return this.http.get('http://localhost:8000/getbill/');
-  }
 
-  getFeedback() {
-    return this.http.get('http://localhost:8000/getFeedback/');
-  }
+
+
   getblockid(id: any) {
     return this.http.get('http://localhost:8000/get_block/' + id);
   }

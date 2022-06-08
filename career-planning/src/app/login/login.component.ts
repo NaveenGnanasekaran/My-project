@@ -54,7 +54,8 @@ export class LoginComponent implements OnInit {
             }
         }
         if (this.flag == 1) {
-            this.router.navigate(['/solution2']);
+            this.api.showoff();
+            this.router.navigate(['/home']);
         } else {
             alert('Not a valid user');
             location.reload();

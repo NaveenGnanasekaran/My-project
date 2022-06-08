@@ -1,25 +1,14 @@
 .container {
     min-height: 100vh;
     background-color: skyblue;
-    max-width: 1440px;
-}
-
-.header {
-    /* padding: 100px; */
-    /* background-color: rgb(198, 204, 204); */
-    overflow: hidden;
+    max-width: 1540px;
+    width: 100%;
 
 }
 
-.header img {
-    /* padding-top: 4px; */
-    /* width: 100%; */
-    height: 100vh;
-    width: 100vw;
-    border-radius: 30px;
-}
 
-.header span {
+
+.header h1 span {
     color: #0072FF;
     text-shadow: 3px 2px 5px black;
     /* text-decoration-color: black; */
@@ -28,9 +17,10 @@
 
 .header h1 {
     /* position: absolute;
-    top: 30vh;
-    left: 35rem; */
-    padding-top: 30px;
+    top: 200vh;
+    left: 5rem; */
+    padding-top: 50px;
+    margin-top: 50px;
     text-align: center;
     color: black;
     font-size: 5rem;
@@ -40,21 +30,51 @@
 
 }
 
-button {
+textarea {
+    resize: none;
+    width: 30rem;
+    border-radius: 12px;
+    margin-right: 30px
+}
 
+button {
     background-color: black;
+    font-weight: 500;
+    font-size: 30px;
+    height: 50px;
+    width: 140px;
+    border-radius: 12px;
+    /* padding: 20px; */
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: yellow;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* button { */
+
+/* background-color: black;
     border: none;
     color: #0072FF;
     font-size: 30px;
     width: 15rem;
     border-radius: 20px;
     font-weight: 500;
-}
+} */
 
-button:hover {
-    background-color: white;
-    color: black;
-}
+
 
 
 /* .header h1:hover {
@@ -67,6 +87,104 @@ button:hover {
     padding: 50px;
     text-align: center;
     opacity: 0.8;
-    height: 30vh;
+    height: 300px;
+    color: black;
+    margin-top: 20px;
+}
+
+h3 span {
+    color: red;
+}
+
+img {
+    width: 100%;
+}
+
+.header .employee {
+    border-radius: 30px;
+}
+
+.desc {
+    background-color: black;
+    text-align: center;
+    font-size: 20px;
+    opacity: 0.8;
+    color: white;
+
+}
+
+.desc h2 {
+    color: white;
+    text-shadow: 2px 2px 5px white;
+    opacity: 1;
+}
+
+.cards {
+    height: 30rem;
+    width: 75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 40px;
     margin-top: 40px;
+}
+
+.cards .flexy {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+
+}
+
+.cards .flexy .inside {
+    padding-left: 30px;
+}
+
+.card {
+    /* border: black solid; */
+    background-color: white;
+    /* color: white; */
+    border-radius: 15px;
+    height: 250px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card1,
+.card2,
+.card3 {
+    margin-left: 30px;
+    box-shadow: 2px 2px 10px black;
+}
+
+
+.card1 img,
+.card2 img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.card3 img {
+    width: 100px;
+    border-radius: 50%;
+
+}
+
+.cards p {
+    padding: 20px;
+    font-size: 17px;
+}
+
+h5 {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: 'Pacifico', cursive;
+}
+
+h6 {
+    opacity: 0.5;
+    color: red;
+    font-weight: 800;
 }

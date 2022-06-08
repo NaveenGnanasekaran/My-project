@@ -1,8 +1,17 @@
-.container {
+@import url('https://fonts.googleapis.com/css2?family=Nuosu+SIL&display=swap');
+
+.container-main {
     max-width: 1440px;
-    background-color: pink;
-    padding: 16px;
+    background-color: skyblue;
+    /* min-height: 100vh; */
 }
+
+.container {
+    background-color: black;
+    padding: 16px;
+    color: white;
+}
+
 
 h1 {
     font-size: 50px;
@@ -12,8 +21,8 @@ h1 {
     color: white;
     padding-top: 30px;
     text-shadow: 2px 2px 5px black;
-    margin-top: 50px;
-    margin-bottom: 30px;
+    /* margin-top: 50px; */
+    /* margin-bottom: 30px; */
 }
 
 .content {
@@ -36,7 +45,7 @@ span {
 }
 
 .content2 {
-    margin-bottom: 200px;
+    /* margin-bottom: 200px; */
     font-size: 20px;
     padding: 40px;
     margin-left: 30px;
@@ -55,6 +64,11 @@ h2 {
     margin-bottom: 30px;
 }
 
+.field input {
+    width: 600px;
+    border-radius: 20px;
+}
+
 .content2 img {
     width: 100%;
     border-radius: 40px;
@@ -66,6 +80,52 @@ body {
 
 * {
     box-sizing: border-box;
+}
+
+
+.modal-content {
+    font-family: 'Nuosu SIL', serif;
+    background-color: #fefefe;
+    margin: 5% auto 15% auto;
+    border: 1px solid #888;
+    width: 80%;
+
+}
+
+
+.container p {
+    color: red;
+    text-transform: uppercase;
+}
+
+form h1 {
+    color: yellow;
+    text-shadow: 2px 2px 5px yellow;
+}
+
+label {
+    font-size: 30px;
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+}
+
+select {
+    width: 600px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+}
+
+option {
+    font-size: 20px;
 }
 
 /* Full-width input fields */
@@ -82,22 +142,16 @@ input[type=password] {
 /* Add a background color when the inputs get focus */
 input[type=text]:focus,
 input[type=password]:focus {
-    background-color: #ddd;
+    /* background-color: #ddd; */
     outline: none;
 }
 
-/* Set a style for all buttons */
-button {
-    background-color: black;
-    border-radius: 50px;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-    margin-left: 500px;
+form button {
+    background-color: yellow;
+    font-size: 25px;
+    font-weight: 500;
+    border-radius: 20px;
+    color: black;
 }
 
 button:hover {
@@ -117,7 +171,6 @@ button:hover {
     width: 50%;
 }
 
-/* Add padding to container elements */
 
 
 /* The Modal (background) */
@@ -141,14 +194,6 @@ button:hover {
 }
 
 /* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto;
-    /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%;
-    /* Could be more or less, depending on screen size */
-}
 
 /* Style the horizontal ruler */
 hr {

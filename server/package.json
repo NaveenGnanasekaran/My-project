@@ -1,0 +1,34 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "for career plnning",
+  "main": "index.js",
+  "dependencies": {
+    "@cloudant/cloudant": "^4.5.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "express-validator": "^6.14.1",
+    "logger": "0.0.1",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "no test command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NaveenGnanasekaran/My-project.git"
+  },
+  "keywords": [
+    "express",
+    "node"
+  ],
+  "author": "Thunder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NaveenGnanasekaran/My-project/issues"
+  },
+  "homepage": "https://github.com/NaveenGnanasekaran/My-project#readme"
+}
