@@ -1,9 +1,5 @@
-/* body {
-  background-color: antiquewhite;
-} */
 body {
     background-color: skyblue;
-    /* background-image: linear-gradient(to right top, rgb(144, 196, 62), rgb(107, 104, 104)); */
     height: 91.5vh;
     margin-left: 0px;
     margin-right: 10px;
@@ -32,9 +28,6 @@ h1 {
 .card,
 .card-1 {
     background: white;
-    /* background: linear-gradient(90deg,
-            rgb(202, 240, 88),
-            rgb(121, 112, 112)); */
     border: none;
     width: 450px;
     margin-bottom: 1.5rem;

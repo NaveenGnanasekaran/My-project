@@ -1,5 +1,4 @@
 .container {
-    /* background-color: rgb(176, 227, 247); */
     max-width: 1440px;
     min-height: 200vh;
     overflow: hidden;
@@ -74,5 +73,3 @@ p span {
     width: 600px;
     height: 60px;
 }
-
-/* celebration */

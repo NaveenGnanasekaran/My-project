@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class DtSciComponent implements OnInit {
 
   constructor() {
-    console.log('datascience');
+    console.log('');
   }
 
   ngOnInit(): void {
-    console.log('datascience');
+    console.log('');
 
   }
 

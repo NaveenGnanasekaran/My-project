@@ -78,7 +78,6 @@ export class TenthStudentsComponent implements OnInit {
     alert('Your Data Posted....');
     this.tenthform.reset();
     console.log('data get reloaded');
-    // this.router.navigate(['/webdev'])
     this.api.tenthdata(Formvalue).subscribe((data) => {
       console.log(data);
 

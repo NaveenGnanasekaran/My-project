@@ -2,14 +2,15 @@ const express = require("express");
 const connection = require("express");
 const bodyparser = require("body-parser");
 const app = connection();
-// session = require('express-session');
+session = require('express-session');
 app.use(express.static("public"));
 const port = 8000;
 const winlogger = require("./logger/logger");
 const { body, validationResult } = require('express-validator')
 var login = {};
 const file = require("fs");
-
+var nodemailer = require('nodemailer');
+const { object } = require("joi");
 const cors = require("cors");
 const dbconnection = require("./db");
 const { Router } = require("express");
@@ -17,8 +18,7 @@ const res = require("express/lib/response");
 const req = require("express/lib/request");
 const validation = require("./validator/validation");
 const controller = require('./controller/careercontroller')
-// const session = require("express-session");
-// const mailservice = require("./mail");
+
 app.use(express.static("public"));
 app.use(connection.static("public"));
 app.use(bodyparser.json());
@@ -27,12 +27,12 @@ app.use(
         origin: "http://localhost:4200",
     })
 );
-// var session = require('express-session');
-// app.use(session({
-//     secret: '2C44-4D44-WppQ38S',
-//     resave: true,
-//     saveUninitialized: true
-// }));
+var session = require('express-session');
+app.use(session({
+    secret: '2C44-4D44-WppQ38S',
+    resave: true,
+    saveUninitialized: true
+}));
 app.post("/postquery", (request, response, next) => {
     console.log(request);
     let errorValidation = validation.signupForm.validate(request.body);
@@ -54,27 +54,6 @@ app.post("/postquery", (request, response, next) => {
     }
 
 });
-// app.post("/postquery", body('uname').custom(value => {
-//     return User.find({
-//         uname: value
-//     }).then(user => {
-//         if (user.length > 0) {
-//             return Promise.reject('Username must  greater than 0 letters')
-//         }
-//     });
-
-// }), (request, response) => {
-
-//     const errors = validationResult(request);
-//     if (!errors.isEmpty()) {
-//         return res.status(400).json({
-//             errors: errors.array()
-//         });
-//     }
-
-
-//     // dbconnection.insert(object);
-// });
 
 app.post("/testquery", (request, response, next) => {
     console.log(request);
@@ -181,11 +160,7 @@ app.post("/counselling", (request, response, next) => {
             to: object.email,
             subject: 'Counselling',
             text: 'Booking successful! Here your meeting-link: meet.google.com/ffd-awrj-ydw',
-            // attachments: [
-            //     {
-            //         path: '\My-project\career-planning\src\images'
-            //     }
-            // ]
+
         };
         dbconnection.insert(object);
         transporter.sendMail(mailOptions, function (error, info) {
@@ -200,41 +175,7 @@ app.post("/counselling", (request, response, next) => {
         winlogger.info('error', errorValidation);
     }
 });
-var nodemailer = require('nodemailer');
-const { object } = require("joi");
 
-
-
-
-
-// app.post("/post_query", (request, response, next) => {
-//     console.log(request);
-//     var object = {
-//         block: request.body.block,
-//         maintainance: request.body.maintainance,
-//         housetax: request.body.housetax,
-//         watertax: request.body.watertax,
-//         parking: request.body.parking,
-//         charity: request.body.charity,
-//         type: "bill",
-//     };
-
-//     dbconnection.insert1(object);
-// });
-
-// app.post("/post__query", (request, response, next) => {
-//     console.log(request);
-//     var object = {
-//         name: request.body.name,
-//         email: request.body.email,
-//         blockname: request.body.blockname,
-//         category: request.body.category,
-//         msg: request.body.msg,
-//         type: "feedback",
-//     };
-
-//     dbconnection.insert2(object);
-// });
 
 app.get("/getUser", (request, response) => {
     console.log(request);
@@ -253,13 +194,7 @@ app.get("/getUser", (request, response) => {
             response.status(404).send({ fail: "Login authentication failed" });
         }
     })
-    // dbconnection.get(data, "career_signup").then((res) => {
-    //     if (res) {
-    //         response.send(res);
-    //     } else {
-    //         response.send("error");
-    //     }
-    // });
+
 
 });
 app.get("/getUserId/:id", (request, response) => {
@@ -312,30 +247,6 @@ app.get("/getadminId/:id", (request, response) => {
         }
     });
 });
-
-// app.listen(port, (err) => {
-//     if (err) {
-//         return console.log("something bad happened", err);
-//     }
-
-//     winlogger.info("SUCCESS", "Server is running!!!");
-
-//     console.log(`server is listening on http://localhost:${port}`);
-// });
-
-// app.get("/getUser", (request, response) => {
-//     console.log(request);
-
-//     console.log("Fetching....");
-
-//     dbconnection.get("career_signup").then((res) => {
-//         if (res) {
-//             response.send(res);
-//         } else {
-//             response.send("error");
-//         }
-//     });
-// });
 
 
 app.listen(port, (err) => {

@@ -76,7 +76,6 @@ export class TwelthStudentsComponent implements OnInit {
     alert('Your Data Posted..💡');
     this.twelthform.reset();
     console.log('data get reloaded');
-    // this.router.navigate(['/webdev'])
     this.api.twelthdata(Formvalue).subscribe((data) => {
       console.log(data);
 

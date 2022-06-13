@@ -3,7 +3,6 @@
 
 .contact {
     background-color: rgb(176, 227, 247);
-    /* background-color: rgb(248, 156, 146); */
     max-width: 1900px;
     min-height: 300vh;
     overflow: hidden;
@@ -24,14 +23,11 @@
 .contact img {
     height: 400px;
     width: 100%;
-    /* box-shadow: 2px 2px 50px black; */
 }
 
 .contact p {
     font-size: 30px;
     font-weight: 500;
-    /* padding: 40px; */
-    /* background-color: skyblue; */
     border-radius: 30px;
     padding: 50px;
     margin-top: 50px;
@@ -39,8 +35,6 @@
 
 .container {
     background-color: #dee0e1;
-    /* background-color: rgb(206, 201, 201); */
-    /* background: linear-gradient(yellow, yellowgreen); */
     width: 100%;
     height: 600px;
     box-shadow: 2px 20px 50px black;
@@ -66,20 +60,14 @@
 .contact .container .form {
     max-height: 100vh;
     width: 100%;
-    /* background-color:; */
 }
 
 .contact .container .form form {
-    /* width: 800px; */
     height: 500px;
     margin-top: 50px;
-    /* font-size: 50px; */
     margin-left: 30px;
     display: inline-block;
     min-height: 1200px;
-    /* display: flex; */
-    /* align-items: center; */
-    /* justify-content: center; */
 }
 
 
@@ -89,12 +77,6 @@
 
 
 }
-
-/* 
-.contact .container .form h1::first-letter {
-    color: steelblue;
-    text-shadow: 2px 2px 5px black
-} */
 
 .contact .container .form form label {
     font-size: 30px;

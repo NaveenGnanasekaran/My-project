@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class AppDevComponent implements OnInit {
 
   constructor() {
-    console.log('app-dev');
+    console.log('');
 
   }
 
   ngOnInit(): void {
-    console.log('app-dev');
+    console.log('');
 
   }
 

@@ -11,23 +11,16 @@
 .header h1 span {
     color: #0072FF;
     text-shadow: 3px 2px 5px black;
-    /* text-decoration-color: black; */
 
 }
 
 .header h1 {
-    /* position: absolute;
-    top: 200vh;
-    left: 5rem; */
     padding-top: 50px;
     margin-top: 50px;
     text-align: center;
     color: black;
     font-size: 5rem;
     text-shadow: 3px 2px 5px black;
-    /* width: 100vw; */
-
-
 }
 
 textarea {
@@ -44,7 +37,6 @@ button {
     height: 50px;
     width: 140px;
     border-radius: 12px;
-    /* padding: 20px; */
 }
 
 a {
@@ -62,26 +54,6 @@ a:hover {
     align-items: center;
     justify-content: center;
 }
-
-/* button { */
-
-/* background-color: black;
-    border: none;
-    color: #0072FF;
-    font-size: 30px;
-    width: 15rem;
-    border-radius: 20px;
-    font-weight: 500;
-} */
-
-
-
-
-/* .header h1:hover {
-    text-decoration: underline black;
-    transition: .3s ease infinite;
-    text-shadow: 3px 2px 5px black;
-} */
 
 .header h3 {
     padding: 50px;
@@ -141,9 +113,7 @@ img {
 }
 
 .card {
-    /* border: black solid; */
     background-color: white;
-    /* color: white; */
     border-radius: 15px;
     height: 250px;
     width: 500px;

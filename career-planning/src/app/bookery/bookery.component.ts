@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class BookeryComponent implements OnInit {
 
   constructor() {
-    console.log('bookery');
+    console.log('');
   }
 
   ngOnInit(): void {
-    console.log('bookery');
+    console.log('');
 
   }
 

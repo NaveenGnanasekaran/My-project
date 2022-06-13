@@ -15,7 +15,8 @@ export class ContactComponent implements OnInit {
     this.contactform = this.build.group({
       name: [''],
       email: [''],
-      phone: ['']
+      phone: [''],
+      txt: ['']
     });
 
   }
@@ -29,7 +30,7 @@ export class ContactComponent implements OnInit {
   }
   onSubmit(form: FormGroup) {
     this.submitted = true;
-    console.log('Valid?', form.valid); // true or false
+    console.log('Valid?', form.valid);
     console.log('Email', form.value.email);
   }
   onReset() {

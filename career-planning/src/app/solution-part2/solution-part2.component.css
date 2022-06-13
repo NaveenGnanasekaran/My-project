@@ -98,7 +98,6 @@ span {
 .card {
     background-color: black;
     color: white;
-    /* border: solid black; */
     border-radius: 20px;
     box-shadow: 20px 20px 50px black;
 }
@@ -116,7 +115,6 @@ h5 {
 #twelve {
     margin-top: 15px;
     margin-left: 60px;
-    /* background-color: rebeccapurple; */
 }
 
 a {
@@ -126,7 +124,3 @@ a {
     color: black;
     font-size: 20px;
 }
-
-/* #twelve {
-    margin-top: 30px
-} */

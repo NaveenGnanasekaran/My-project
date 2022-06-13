@@ -8,12 +8,12 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 
   constructor() {
-    console.log('footer');
+    console.log('');
 
   }
 
   ngOnInit(): void {
-    console.log('footer');
+    console.log('');
 
   }
 

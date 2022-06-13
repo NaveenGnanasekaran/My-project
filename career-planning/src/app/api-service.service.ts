@@ -18,11 +18,10 @@ export class ApiServiceService {
     this.show = !this.show;
     console.log(this.show)
   }
-  // add1(formobject: any) {
-  // console.log("abdc");
-  // return this.http.post("http://localhost:8000/contact", formobject)
+  adduser(formobject: any) {
+    return this.http.post("http://localhost:8000/contact", formobject)
 
-  // }
+  }
   // getUser() {
   //   return this.http.get('http://localhost:8000/getUser/');
   // }

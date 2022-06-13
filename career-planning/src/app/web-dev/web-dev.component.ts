@@ -8,11 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class WebDevComponent implements OnInit {
 
   constructor() {
-    console.log('webdev');
+    console.log('');
   }
 
   ngOnInit(): void {
-    console.log('webdev');
+    console.log('');
   }
 
 }

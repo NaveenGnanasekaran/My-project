@@ -1,9 +1,7 @@
 .container {
     background-color: rgb(176, 227, 247);
-    /* background-color: gray; */
     max-width: 1400px;
     overflow: hidden;
-    /* background-color: #eaeced; */
 }
 
 .container .heading h1 {
@@ -33,9 +31,6 @@ a {
 }
 
 .container .blog-tutorials {
-    /* background-color: gray; */
-    /* display: flex; */
-    /* flex-direction: row; */
     margin-left: 200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -68,12 +63,6 @@ a {
 .container .blog-tutorials a {
     color: white;
 }
-
-
-/* .blog-tutorials img:hover {
-    transform: scale(1.2);
-} */
-
 
 .head {
     margin-top: 30px;
