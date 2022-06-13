@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(189, 236, 255);
+    min-height: 100vh;
+}
+
+.container {
+    display: block;
+    text-align: center;
+    width: 500px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    width: 25%;
+    height: 50px;
+    border-radius: 12px;
+
+}
+
+button a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+img {
+    margin-top: 100px;
+}
+
+span {
+    color: red;
+}
+
+h5 {
+    font-size: 40px;
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+}

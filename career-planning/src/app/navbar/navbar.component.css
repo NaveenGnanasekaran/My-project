@@ -49,8 +49,8 @@ h1 {
     /* font-family: 'Poppins', sans-serif; */
     font-family: 'Pacifico', cursive;
 
-    color: rgb(57, 170, 214);
-    text-shadow: 2px 2px 50px rgb(57, 170, 214);
+    color: white;
+    text-shadow: 2px 2px 50px white;
     font-weight: 700;
     padding: 10px;
     /* font-family: 'Dancing Script', cursive; */
@@ -65,8 +65,8 @@ li a {
     font-weight: 800;
     /* font-size: 20px; */
     background-color: transparent;
-    color: skyblue;
-    text-shadow: 2px 2px 50px skyblue;
+    color: white;
+    text-shadow: 2px 2px 50px white;
 
 
 

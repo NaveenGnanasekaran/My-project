@@ -9,18 +9,20 @@
                     <div class="field">
                         <label for="username" class="text-light">User Name :</label>
                         <input type="text" formControlName="username" id="username" class="form-control"
-                            placeholder="Enter your Name here" />
+                            placeholder="Enter your Name here" minlength="3" />
                         <span class="text-danger" *ngIf="
                   registerform.controls['username'].touched &&
                   registerform.hasError('required', 'username')
                 ">
                             *Name is required!!</span>
+                        <span class="text-danger" *ngIf="registerform.hasError('minlength','username')">Username should
+                            be atleast 3 letters</span>
                     </div>
 
                     <div class="field">
                         <label for="phone" class="text-light">Phone Number :</label>
                         <input type="tel" formControlName="phone" id="phone" class="form-control"
-                            placeholder="Enter Mobile Number" />
+                            placeholder="Enter Mobile Number" pattern="[0-9]{10}" maxlength="10" />
                         <span class="text-danger" *ngIf="
                   registerform.controls['phone'].touched &&
                   registerform.hasError('required', 'phone')
@@ -31,36 +33,26 @@
                     <div class="field">
                         <label for="gmail" class="text-light">Gmail :</label>
                         <input type="text" formControlName="email" id="gmail" class="form-control"
-                            placeholder="Enter your gmail" />
+                            placeholder="Enter your gmail" pattern="^([\w]*[\w\.]*(?!\.)@gmail.com)" />
                         <span class="text-danger" *ngIf="
                   registerform.controls['email'].touched &&
-                  registerform.hasError('required', 'email')
-                ">
+                  registerform.hasError('required', 'email')">
                             *Enter Valid Gmail!!</span>
+                        <span class="text-danger" *ngIf="registerform.hasError('pattern','email')">Email pattern is
+                            invalid</span>
                     </div>
 
-                    <div class="field">
-                        <label for="blockname" class="text-light">Block Name :</label>
-                        <input type="text" formControlName="blockname" id="blockname" class="form-control"
-                            placeholder="Enter your User Name here" />
-                        <span class="text-danger" *ngIf="
-                  registerform.controls['blockname'].touched &&
-                  registerform.hasError('required', 'blockname')
-                ">
-                            *Block Name is required!!</span>
-                    </div>
 
                     <div class="field">
                         <label for="password" class="text-light">Password :</label>
                         <input type="password" formControlName="password" name="password" id="password"
-                            class="form-control" placeholder="Enter your password" />
+                            class="form-control" placeholder="Enter your password" minlength="8" maxlength="10" />
+                        <span class="text-danger" *ngIf="registerform.hasError('minlength','password')">Password should
+                            be atleast 8 letters</span>
                     </div>
 
-                    <div class="field">
-                        <label for="confirmpassword" class="text-light">Confirm Password :</label>
-                        <input type="password" formControlName="confirmpassword" id="confirmpassword"
-                            class="form-control" placeholder="Enter your Confirm password" />
-                    </div>
+
+
 
                     <div class="buttons text-center">
                         <button type="submit" class="btn btn-dark" (click)="register(this.registerform.value)"

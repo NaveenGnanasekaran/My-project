@@ -23,7 +23,7 @@ export class TenthStudentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.tenthform = this.formbuilder.group({
-      uname: ['', Validators.required],
+      username: ['', Validators.required],
       higher: ['', Validators.required],
       science: ['', Validators.required],
       arts: ['', Validators.required],

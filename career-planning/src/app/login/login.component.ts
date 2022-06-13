@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ApiServiceService } from '../api-service.service';
-
+import { ToastrService } from 'ngx-toastr';
 @Component({
     selector: 'app-login',
     templateUrl: './login.component.html',
@@ -16,18 +16,21 @@ export class LoginComponent implements OnInit {
     constructor(
         private formbuilder: FormBuilder,
         private api: ApiServiceService,
-        private router: Router
+        private router: Router,
+        private toastr: ToastrService
     ) { }
 
     ngOnInit(): void {
         this.userform = this.formbuilder.group({
             username: ['', Validators.required],
-            password: ['', Validators.required],
+            password: ['', [Validators.required, Validators.minLength(5)]],
         });
 
         this.api.getUser().subscribe((data) => {
             console.log(data);
+
             console.log('Data was fetching');
+
             this.alldata = data;
             this.alldata = this.alldata.docs;
             console.log(this.alldata);
@@ -38,6 +41,7 @@ export class LoginComponent implements OnInit {
                 //   console.log(res);
                 this.object.push(i);
                 console.log('Fetched successfuly');
+
                 // });
             }
         });
@@ -54,9 +58,15 @@ export class LoginComponent implements OnInit {
             }
         }
         if (this.flag == 1) {
+
             this.api.showoff();
-            this.router.navigate(['/home']);
+            alert('Valid User!')
+            this.toastr.success('login successfully');
+
+            this.router.navigate(['/solution2']);
         } else {
+            this.toastr.error('login is invalid');
+
             alert('Not a valid user');
             location.reload();
         }

@@ -23,8 +23,8 @@
         <p>Our career finder for students and professionals has helped thousands of career explorers find the right
             career path for themselves. The result is shown as a simple chart and a list of careers, that easy to
             interpret and understand.</p>
-    </div>
-    <div class="content2">
+        <!-- </div> -->
+        <!-- <div class="content2">
         <h1>Career Finidng Test</h1>
         <img src="../../images/test.jpg" alt="test.jpg">
         <h2>Test Instructions</h2>
@@ -32,134 +32,166 @@
             performing each on a scale of (1) strongly dislike (2) slightly dislike (3) neither like nor dislike (4)
             slightly enjoy (5) strongly enjoy. This test will help you choose a career path based on your personality
             type and your interests in a particular field or subject.</p>
-        <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Find your
-            carrier!</button>
+        
 
-    </div>
+    </div> -->
 
-    <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-        <form class="modal-content" action="post" [formGroup]="careerform">
-            <div class="container">
-                <h1>Self Validation</h1>
-                <p>*instruction:Please provide rating to the follwing languages.</p>
-                <hr>
-                <div class="field">
-                    <label for="" class="text">Name:</label>
-                    <input type="text" formControlName="uname" required>
-                </div>
-                <div class="field">
-                    <label for="question" class="text">Javascript</label>
-                    <select formControlName="javascript" required>
-                        <option value="100" id="question">Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question">Poor</option>
-                    </select>
-
-                </div>
-                <div class="field">
-                    <label for="question" class="text">CSS</label>
-                    <select formControlName="css">
-                        <option value=" 100" id="question">Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question">Poor</option>
-                    </select>
-
-                </div>
-                <div class="field">
-                    <label for="question" class="text">Html</label>
-                    <select formControlName="html">
-                        <option value="100" id="question" selected>Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question">Poor</option>
-                    </select>
-
-                </div>
-                <div class="field">
-                    <label for="question" class="text">c/c++</label>
-                    <select formControlName="c">
-                        <option value="100" id="question" selected>Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question">Poor</option>
-                    </select>
-
-                </div>
-                <div class="field">
-                    <label for="question" class="text">Matlab</label>
-                    <select formControlName="matlab">
-                        <option value="100" id="question" selected>Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question">Poor</option>
-                    </select>
-
-                </div>
-                <div class="field">
-                    <label for="question" class="text">Python</label>
-                    <select formControlName="python">
-                        <option value="100" id="question" selected>Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question">Poor</option>
-                    </select>
-
-                </div>
-
-
-                <div class="field">
-                    <label for="question" class="text">Swift</label>
-                    <select formControlName="swift">
-                        <option value="100" id="question" selected>Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question">Poor</option>
-                    </select>
-
-                </div>
-                <div class="field">
-                    <label for="question" class="text">Objective c</label>
-                    <select formControlName="objc">
-                        <option value="100" id="question" selected>Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question">Poor</option>
-                    </select>
-                </div>
-                <div class="field">
-                    <label for="question" class="text">Java</label>
-                    <select formControlName="java">
-                        <option value="100" id="question">Excellent</option>
-                        <option value="75" id="question">Good</option>
-                        <option value="50" id="question">Fair</option>
-                        <option value="25" id="question" selected="selected">Poor</option>
-                    </select>
-                </div>
-
-                <button type="submit" class="btn btn-dark" (click)="career(this.careerform.value)">
-                    FindYourself!
-                </button>
-
-
-
+        <div class="card">
+            <div class="card1">
+                <h1>TEST</h1>
+                <p>Take a self evaluation Test to find which field is more suitable for you!
+                    Self-evaluations are formal or informal tests that offer insight into what you do well and what you
+                    like to do. Formal tests are commercially available norm-referenced tests that are designed to
+                    evaluate people in comparison to others.</p>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Find your
+                    carrier!</button>
             </div>
-        </form>
-    </div>
+            <div class="card2">
+                <h1>counselling</h1>
+                <p>Take a Counselling to find which field is more suitable for you!
+                    Career counselling helps the students and professionals understand the career opportunities and
+                    options available. Career counselling helps them analyze their strengths and weaknesses and helps in
+                    finding the perfect career path.
+                </p>
+                <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Find your
+                    carrier!</button> -->
+                <button [routerLink]="['/counselling']" routerLinkActive="active">Take counselling!
+                </button>
+            </div>
 
-    <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
+        </div>
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <form class="modal-content" action="post" [formGroup]="careerform">
+                <div class="container">
+                    <h1>Self Validation</h1>
+                    <p>*instruction:Please provide rating to the follwing languages.</p>
+                    <hr>
+                    <div class="field">
+                        <label for="" class="text">Name:</label>
+                        <input type="text" formControlName="username" required>
+                    </div>
+                    <div class="field">
+                        <label for="question" class="text">Javascript</label>
+                        <select formControlName="javascript" required>
+                            <option value="100" id="question">Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question">Poor</option>
+                        </select>
+
+                    </div>
+                    <div class="field">
+                        <label for="question" class="text">CSS</label>
+                        <select formControlName="css">
+                            <option value=" 100" id="question">Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question">Poor</option>
+                        </select>
+
+                    </div>
+                    <div class="field">
+                        <label for="question" class="text">Html</label>
+                        <select formControlName="html">
+                            <option value="100" id="question" selected>Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question">Poor</option>
+                        </select>
+
+                    </div>
+                    <div class="field">
+                        <label for="question" class="text">c/c++</label>
+                        <select formControlName="c">
+                            <option value="100" id="question" selected>Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question">Poor</option>
+                        </select>
+
+                    </div>
+                    <div class="field">
+                        <label for="question" class="text">Matlab</label>
+                        <select formControlName="matlab">
+                            <option value="100" id="question" selected>Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question">Poor</option>
+                        </select>
+
+                    </div>
+                    <div class="field">
+                        <label for="question" class="text">Python</label>
+                        <select formControlName="python">
+                            <option value="100" id="question" selected>Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question">Poor</option>
+                        </select>
+
+                    </div>
+
+
+                    <div class="field">
+                        <label for="question" class="text">Swift</label>
+                        <select formControlName="swift">
+                            <option value="100" id="question" selected>Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question">Poor</option>
+                        </select>
+
+                    </div>
+                    <div class="field">
+                        <label for="question" class="text">Objective c</label>
+                        <select formControlName="objectivec">
+                            <option value="100" id="question" selected>Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question">Poor</option>
+                        </select>
+                    </div>
+                    <div class="field">
+                        <label for="question" class="text">Java</label>
+                        <select formControlName="java">
+                            <option value="100" id="question">Excellent</option>
+                            <option value="75" id="question">Good</option>
+                            <option value="50" id="question">Fair</option>
+                            <option value="25" id="question" selected="selected">Poor</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-dark" (click)="career(this.careerform.value)">
+                        FindYourself!
+                    </button>
+
+
+
+                </div>
+            </form>
+        </div>
+
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
-        }
-    </script>
-</div>
-<app-footer></app-footer>
+            var modal1 = document.getElementById('id02');
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal1) {
+                    modal1.style.display = "none";
+                }
+            }
+        </script>
+    </div>
+    <app-footer></app-footer>

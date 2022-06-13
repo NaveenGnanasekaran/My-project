@@ -23,26 +23,26 @@ export class TwelthStudentsComponent implements OnInit {
 
   ngOnInit(): void {
     this.twelthform = this.formbuilder.group({
-      uname: ['', Validators.required],
-      sci: ['', Validators.required],
-      phy: ['', Validators.required],
-      che: ['', Validators.required],
-      bio: ['', Validators.required],
-      mat: ['', Validators.required],
-      art: ['', Validators.required],
-      hmt: ['', Validators.required],
-      bus: ['', Validators.required],
-      acc: ['', Validators.required],
-      os: ['', Validators.required],
+      username: ['', Validators.required],
+      science: ['', Validators.required],
+      physics: ['', Validators.required],
+      chemistry: ['', Validators.required],
+      biology: ['', Validators.required],
+      maths: ['', Validators.required],
+      arts: ['', Validators.required],
+      humanity: ['', Validators.required],
+      business: ['', Validators.required],
+      accountancy: ['', Validators.required],
+      openstreams: ['', Validators.required],
     });
   }
   twelth(Formvalue: any) {
-    if (Formvalue.sci == 1) {
-      if (Formvalue.phy == 1 && Formvalue.che == 1 && Formvalue.bio == 1) {
+    if (Formvalue.science == 1) {
+      if (Formvalue.physics == 1 && Formvalue.chemistry == 1 && Formvalue.biology == 1) {
         this.router.navigate(['/solution']);
         console.log('pcb')
       }
-      else if (Formvalue.phy == 1 && Formvalue.che == 1 && Formvalue.mat == 1) {
+      else if (Formvalue.physics == 1 && Formvalue.chemistry == 1 && Formvalue.maths == 1) {
         this.router.navigate(['/solution2']);
         console.log('pcm')
       }
@@ -51,16 +51,16 @@ export class TwelthStudentsComponent implements OnInit {
       }
 
     }
-    else if (Formvalue.sci == 0) {
-      if (Formvalue.art == 1 && Formvalue.hmt == 1) {
+    else if (Formvalue.science == 0) {
+      if (Formvalue.arts == 1 && Formvalue.humanity == 1) {
         this.router.navigate(['/home']);
         console.log('art');
       }
-      else if (Formvalue.bus == 1 && Formvalue.acc == 1) {
+      else if (Formvalue.business == 1 && Formvalue.accountancy == 1) {
         this.router.navigate(['/about']);
         console.log('business');
       }
-      else if (Formvalue.os == 1) {
+      else if (Formvalue.openstream == 1) {
         this.router.navigate(['/contact']);
         console.log('opensource');
       }

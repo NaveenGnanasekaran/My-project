@@ -13,7 +13,7 @@ import { BookeryComponent } from './bookery/bookery.component';
 import { HomeComponent } from './home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './footer/footer.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AdminComponent } from './admin/admin.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TenthStudentsComponent } from './tenth-students/tenth-students.component';
@@ -24,6 +24,11 @@ import { WebDevComponent } from './web-dev/web-dev.component';
 import { AppDevComponent } from './app-dev/app-dev.component';
 import { MobDevComponent } from './mob-dev/mob-dev.component';
 import { DtSciComponent } from './dt-sci/dt-sci.component';
+import { PiechartComponent } from './piechart/piechart.component';
+import { HttpCallInterceptor } from './interceptor';
+import { ToastrModule } from 'ngx-toastr';
+import { CounsellingComponent } from './counselling/counselling.component';
+import { BookingComponent } from './booking/booking.component';
 
 
 @NgModule({
@@ -48,16 +53,24 @@ import { DtSciComponent } from './dt-sci/dt-sci.component';
     WebDevComponent,
     AppDevComponent,
     MobDevComponent,
-    DtSciComponent
+    DtSciComponent,
+    PiechartComponent,
+    CounsellingComponent,
+    BookingComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: HttpCallInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

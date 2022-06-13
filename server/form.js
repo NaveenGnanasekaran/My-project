@@ -1,173 +1,3 @@
-// const express = require("express");
-// const connection = require("express");
-// const bodyparser = require("body-parser");
-// const app = connection();
-// const port = 8000;
-// var login = {};
-// const cors = require("cors");
-// const dbconnection = require("./db");
-// const { request } = require("express");
-// const { response } = require("express");
-
-// const fs = require("fs");
-// const loggger = require('./logger/logger');
-// const express = require("express");
-// const res = require("express/lib/response");
-// app.use(express.static("public"));
-
-// const { response } = require("express");
-// app.use(connection.static("public"));
-// app.use(bodyparser.json());
-// app.use(
-//     cors({
-//         origin: "http://localhost:4200",
-//     })
-// );
-
-// app.post("/signup", (request, response) => {
-//     console.log(request);
-//     var object = {
-//         fname: request.body.fname,
-//         lname: request.body.lname,
-//         uname: request.body.uname,
-//         email: request.body.email,
-//         password: request.body.password //formcontrolname
-// confirm_password: request.body.cpsw,
-// mobileno: request.body.mobileno,
-
-// };
-
-// dbconnection.insert(object);
-// console.log("Data added");
-// alert('data added');
-// });
-// app.post("/contact", (request, response) => {
-//     console.log(request);
-//     var object = {
-//         email: request.body.email,
-// mobileno: request.body.mobileno,
-
-// password: request.body.password,//formcontrolname
-// confirm_password: request.body.cpsw,
-//     };
-
-//     dbconnection.insert(object);
-//     console.log("Data added");
-// });
-// app.get("/getUser", (request, response) => {
-//     console.log(request);
-
-//     console.log("Fetching Begins");
-
-//     dbconnection.get("career_signup").then((res) => {
-//         if (res) {
-//             response.send(res);
-//         } else {
-//             response.send("error");
-//         }
-//     });
-// });
-
-// app.get("/getadmin", (request, response) => {
-//     console.log(request);
-//     var data = {
-//         selector: {
-//             type: "admin",
-//         },
-//     };
-//     dbconnection.get(data, "career_signup").then((res) => {
-//         if (res) {
-//             response.send(res);
-//         } else {
-//             response.send("error");
-//         }
-//     });
-//     response.render('db.js')
-// });
-// app.get("/getadminId/:id", (request, response) => {
-//     dbconnection.getId(request.params.id, "career_signup").then((res) => {
-//         if (res) {
-//             response.send(res);
-//         } else {
-//             response.send("error");
-//         }
-//     });
-// });
-
-// app.get('/getadmindata/:id', (req, res) => {
-//     var adminobject = {
-//         selector: {
-//             username: req.params.id,
-//             type: 'admin',
-//         },
-//     };
-//     console.log(adminobject);
-//     dbconnection.career_signup
-//         .find(adminobject)
-//         .then((data) => {
-//             console.log('data fetch from db', data);
-//             res.send(data);
-//         })
-//         .catch((err) => {
-//             console.log('error', err);
-//         });
-// });
-
-// app.get("/getUser", (request, response) => {
-//     console.log(request);
-//     var data = {
-//         selector: {
-//             type: "user",
-//         },
-//     };
-//     dbconnection.get(data, "career_signup").then((res) => {
-//         if (res) {
-//             response.send(res);
-//         } else {
-//             response.send("error");
-//         }
-//     });
-// });
-// app.get("/getUserId/:id", (request, response) => {
-//     dbconnection.getId(request.params.id, "career_signup").then((res) => {
-//         if (res) {
-//             response.send(res);
-//         } else {
-//             response.send("error");
-//         }
-//     });
-// });
-
-
-
-// app.get("/getUserId/:id", (request, response) => {
-//     dbconnection.getId(request.params.id, "career_signup").then((res) => {
-//         if (res) {
-//             response.send(res);
-//         } else {
-//             response.send("error");
-//         }
-//     });
-// });
-// app.delete("/delete/:id/:id1", (request, response) => {
-//     dbconnection
-//         .del_id(request.params.id, request.params.id1, "career_signup")
-//         .then((res) => {
-//             if (res) {
-//                 response.send(res);
-//             } else {
-//                 response.send("error");
-//             }
-//         });
-// });
-
-
-// app.listen(port, (err) => {
-//     if (err) {
-//         console.log(err);
-//     }
-//     console.log(`htpp://localhost:8000`);
-// })
 const express = require("express");
 const connection = require("express");
 const bodyparser = require("body-parser");
@@ -179,14 +9,14 @@ const winlogger = require("./logger/logger");
 const { body, validationResult } = require('express-validator')
 var login = {};
 const file = require("fs");
-const { request } = require("http");
-const { response } = require("express");
-const { nextTick } = require("process");
+
 const cors = require("cors");
 const dbconnection = require("./db");
 const { Router } = require("express");
 const res = require("express/lib/response");
 const req = require("express/lib/request");
+const validation = require("./validator/validation");
+const controller = require('./controller/careercontroller')
 // const session = require("express-session");
 // const mailservice = require("./mail");
 app.use(express.static("public"));
@@ -205,96 +35,177 @@ app.use(
 // }));
 app.post("/postquery", (request, response, next) => {
     console.log(request);
-    var object = {
-        username: request.body.username,
-        phone: request.body.phone,
-        email: request.body.email,
-        blockname: request.body.blockname,
-        password: request.body.password,
-        confirmpassword: request.body.confirmpassword,
-        type: "user",
-    };
+    let errorValidation = validation.signupForm.validate(request.body);
+    console.log(errorValidation, 'hello');
+    if (!errorValidation.error) {
+        var object = {
+            username: request.body.username,
+            phone: request.body.phone,
+            email: request.body.email,
+            password: request.body.password,
+            type: "user",
+        };
 
-    dbconnection.insert(object);
-});
-app.post("/postquery", body('uname').custom(value => {
-    return User.find({
-        uname: value
-    }).then(user => {
-        if (user.length > 0) {
-            return Promise.reject('Username must  greater than 0 letters')
-        }
-    });
+        dbconnection.insert(object);
 
-}), (request, response) => {
-
-    const errors = validationResult(request);
-    if (!errors.isEmpty()) {
-        return res.status(400).json({
-            errors: errors.array()
-        });
+    }
+    else {
+        winlogger.info('error from post');
     }
 
-
-    // dbconnection.insert(object);
 });
+// app.post("/postquery", body('uname').custom(value => {
+//     return User.find({
+//         uname: value
+//     }).then(user => {
+//         if (user.length > 0) {
+//             return Promise.reject('Username must  greater than 0 letters')
+//         }
+//     });
+
+// }), (request, response) => {
+
+//     const errors = validationResult(request);
+//     if (!errors.isEmpty()) {
+//         return res.status(400).json({
+//             errors: errors.array()
+//         });
+//     }
+
+
+//     // dbconnection.insert(object);
+// });
 
 app.post("/testquery", (request, response, next) => {
     console.log(request);
-    var object = {
-        uname: request.body.uname,
-        javascript: request.body.javascript,
-        html: request.body.html,
-        css: request.body.css,
-        c: request.body.c,
-        matlab: request.body.matlab,
-        python: request.body.python,
-        // android: request.body.android,
-        swift: request.body.swift,
-        objc: request.body.objc,
-        java: request.body.java,
-        type: "testdata",
-    };
+    let errorValidation = validation.testForm.validate(request.body);
+    console.log(errorValidation, 'hi');
+    if (!errorValidation.error) {
+        var object = {
+            username: request.body.username,
+            javascript: request.body.javascript,
+            html: request.body.html,
+            css: request.body.css,
+            c: request.body.c,
+            matlab: request.body.matlab,
+            python: request.body.python,
+            swift: request.body.swift,
+            objectivec: request.body.objectivec,
+            java: request.body.java,
+            type: "testdata",
+        };
 
-    dbconnection.insert(object);
+        dbconnection.insert(object);
+
+    }
+    else {
+        winlogger.info('error from testdata post')
+    }
+
 });
 
 app.post("/tenthquery", (request, response, next) => {
     console.log(request);
-    var object = {
-        uname: request.body.uname,
-        higher: request.body.higher,
-        science: request.body.science,
-        arts: request.body.arts,
-        commerce: request.body.commerce,
-        iti: request.body.iti,
-        tech: request.body.tech,
-        diploma: request.body.diploma,
-        polytechnic: request.body.polytechnic,
-        vocation: request.body.vocation,
-        type: "tenthdata",
+    let errorValidation = validation.tenthForm.validate(request.body);
+    console.log(errorValidation, 'salam');
+    if (!errorValidation.error) {
+        var object = {
+            username: request.body.username,
+            higher: request.body.higher,
+            science: request.body.science,
+            arts: request.body.arts,
+            commerce: request.body.commerce,
+            iti: request.body.iti,
+            tech: request.body.tech,
+            diploma: request.body.diploma,
+            polytechnic: request.body.polytechnic,
+            vocation: request.body.vocation,
+            type: "tenthdata",
+        }
+        dbconnection.insert(object);
     }
-    dbconnection.insert(object);
+    else {
+        winlogger.info('error', errorValidation);
+    }
+
 
 });
 app.post("/twelthquery", (request, response, next) => {
     console.log(request);
-    var object = {
-        uname: request.body.uname,
-        sci: request.body.sci,
-        phy: request.body.phy,
-        che: request.body.che,
-        bio: request.body.bio,
-        mat: request.body.mat,
-        art: request.body.art,
-        hmt: request.body.hmt,
-        bus: request.body.bus,
-        acc: request.body.acc,
-        os: request.body.os,
-        type: "twelthdata",
+    let errorValidation = validation.twelthForm.validate(request.body);
+    console.log(errorValidation, 'namaskaram');
+    if (!errorValidation.error) {
+        var object = {
+            username: request.body.username,
+            science: request.body.science,
+            physics: request.body.physics,
+            chemistry: request.body.chemistry,
+            biology: request.body.biology,
+            maths: request.body.maths,
+            arts: request.body.arts,
+            humanity: request.body.humanity,
+            business: request.body.business,
+            accountancy: request.body.accountancy,
+            openstreams: request.body.openstreams,
+            type: "twelthdata",
+        }
+        dbconnection.insert(object);
     }
-    dbconnection.insert(object);
+    else {
+        winlogger.info('error', errorValidation);
+    }
 });
+app.post("/counselling", (request, response, next) => {
+    console.log(request);
+    let errorValidation = validation.counsellingForm.validate(request.body);
+    console.log(errorValidation, 'namaskaram');
+    if (!errorValidation.error) {
+        var object = {
+            username: request.body.username,
+            phone: request.body.phone,
+            email: request.body.email,
+            qualification: request.body.qualification,
+            time: request.body.time,
+            type: "counselling",
+        }
+        var transporter = nodemailer.createTransport({
+            service: 'gmail',
+            auth: {
+                user: 'visionacademy813@gmail.com',
+                pass: 'fdmatwytijnwtzdh'
+            }
+        });
+
+        var mailOptions = {
+            from: 'visionacademy813@gmail.com',
+            to: object.email,
+            subject: 'Counselling',
+            text: 'Booking successful! Here your meeting-link: meet.google.com/ffd-awrj-ydw',
+            // attachments: [
+            //     {
+            //         path: '\My-project\career-planning\src\images'
+            //     }
+            // ]
+        };
+        dbconnection.insert(object);
+        transporter.sendMail(mailOptions, function (error, info) {
+            if (error) {
+                console.log(error);
+            } else {
+                console.log('Email sent: ' + info.response);
+            }
+        });
+    }
+    else {
+        winlogger.info('error', errorValidation);
+    }
+});
+var nodemailer = require('nodemailer');
+const { object } = require("joi");
+
+
+
+
 
 // app.post("/post_query", (request, response, next) => {
 //     console.log(request);
@@ -332,13 +243,24 @@ app.get("/getUser", (request, response) => {
             type: "user",
         },
     };
-    dbconnection.get(data, "career_signup").then((res) => {
-        if (res) {
-            response.send(res);
-        } else {
-            response.send("error");
+    controller.logincheck(data).then((respond) => {
+        if (respond) {
+            console.log("Data fetched", respond);
+            response.json(respond)
+
         }
-    });
+        else {
+            response.status(404).send({ fail: "Login authentication failed" });
+        }
+    })
+    // dbconnection.get(data, "career_signup").then((res) => {
+    //     if (res) {
+    //         response.send(res);
+    //     } else {
+    //         response.send("error");
+    //     }
+    // });
+
 });
 app.get("/getUserId/:id", (request, response) => {
     dbconnection.getId(request.params.id, "career_signup").then((res) => {
@@ -414,30 +336,8 @@ app.get("/getadminId/:id", (request, response) => {
 //         }
 //     });
 // });
-var auth = function (req, res, next) {
-    if (req.session && req.session.user === "amy" && req.session.admin)
-        return next();
-    else
-        return res.sendStatus(401);
-};
-app.get('/login', function (req, res) {
-    if (!req.query.username || !req.query.password) {
-        res.send('login failed');
-    } else if (req.query.username === "amy" || req.query.password === "amyspassword") {
-        req.session.user = "amy";
-        req.session.admin = true;
-        res.send("login success!");
-    }
-});
-app.get('/logout', function (req, res) {
-    req.session.destroy();
-    res.send("logout success!");
-});
 
-// Get content endpoint
-app.get('/content', auth, function (req, res) {
-    res.send("You can only see this after you've logged in.");
-});
+
 app.listen(port, (err) => {
     if (err) {
         return console.log("something bad happened", err);

@@ -54,6 +54,9 @@ export class ApiServiceService {
   twelthdata(formobject: any) {
     return this.http.post('http://localhost:8000/twelthquery', formobject);
   }
+  counsellingdata(formobject: any) {
+    return this.http.post('http://localhost:8000/counselling', formobject);
+  }
 
 
   getUser() {

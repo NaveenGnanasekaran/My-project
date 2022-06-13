@@ -18,6 +18,9 @@ import { WebDevComponent } from './web-dev/web-dev.component';
 import { MobDevComponent } from './mob-dev/mob-dev.component';
 import { DtSciComponent } from './dt-sci/dt-sci.component';
 import { AppDevComponent } from './app-dev/app-dev.component';
+import { PiechartComponent } from './piechart/piechart.component';
+import { CounsellingComponent } from './counselling/counselling.component';
+import { BookingComponent } from './booking/booking.component';
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'solution', component: SolutionComponent },
@@ -37,6 +40,10 @@ const routes: Routes = [
   { path: 'appdev', component: AppDevComponent },
   { path: 'mobdev', component: MobDevComponent },
   { path: 'dtsci', component: DtSciComponent },
+  { path: 'chart', component: PiechartComponent },
+  { path: 'counselling', component: CounsellingComponent },
+  { path: 'booking', component: BookingComponent },
+
 
 
 ];
