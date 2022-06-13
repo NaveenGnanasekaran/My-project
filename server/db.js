@@ -19,31 +19,7 @@ let insert = function (paramsvalue) {
             console.log(err);
         });
 };
-let insert1 = function (paramsvalue) {
-    console.log(paramsvalue);
-    cloudant
-        .use("housing-software")
-        .insert(paramsvalue)
-        .then((data) => {
-            console.log("Data Inserted into Cloud database" + data);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-};
 
-let insert2 = function (paramsvalue) {
-    console.log(paramsvalue);
-    cloudant
-        .use("housing-software")
-        .insert(paramsvalue)
-        .then((data) => {
-            console.log("Feedback posted to cloud database" + data);
-        })
-        .catch((err) => {
-            console.log(err);
-        });
-};
 find = function (blockdata, dbname) {
     return cloudant.use(dbname).find(blockdata);
 };
