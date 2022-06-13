@@ -47,25 +47,25 @@ export class TenthStudentsComponent implements OnInit {
         this.router.navigate(['/signup']);
       }
     }
-    else if (Formvalue.higher == 0) {
-      if (Formvalue.diploma == 0) {
-        if (Formvalue.iti == 1) {
-          this.router.navigate(['/webdev']);
-        }
-        else if (Formvalue.tech == 1) {
-          this.router.navigate(['/dtsci']);
-        }
+    if (Formvalue.diploma == 0) {
 
+      if (Formvalue.iti == 1) {
+        this.router.navigate(['/webdev']);
       }
-      else {
-        if (Formvalue.polytechnic == 1) {
-          this.router.navigate(['/solution2']);
-        }
-        else if (Formvalue.vocation == 1) {
-          this.router.navigate(['/appdev']);
-        }
+      else if (Formvalue.tech == 1) {
+        this.router.navigate(['/dtsci']);
+      }
+    }
 
+
+    if (Formvalue.diploma == 1) {
+      if (Formvalue.polytechnic == 1) {
+        this.router.navigate(['/solution2']);
       }
+      else if (Formvalue.vocation == 1) {
+        this.router.navigate(['/appdev']);
+      }
+
     }
     else {
       alert('please select respected values!')
