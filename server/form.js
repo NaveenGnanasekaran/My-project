@@ -2,7 +2,7 @@ const express = require("express");
 const connection = require("express");
 const bodyparser = require("body-parser");
 const app = connection();
-session = require('express-session');
+let session = require('express-session');
 app.use(express.static("public"));
 const port = 8000;
 const winlogger = require("./logger/logger");
@@ -37,7 +37,7 @@ app.post("/postquery", (request, _response, _next) => {
     let errorValidation = validation.signupForm.validate(request.body);
     console.log(errorValidation, 'hello');
     if (!errorValidation.error) {
-        object = {
+        let object = {
             username: request.body.username,
             phone: request.body.phone,
             email: request.body.email,
@@ -59,7 +59,7 @@ app.post("/testquery", (request, _response, _next) => {
     let errorValidation = validation.testForm.validate(request.body);
     console.log(errorValidation, 'hi');
     if (!errorValidation.error) {
-        object = {
+        let object = {
             username: request.body.username,
             javascript: request.body.javascript,
             html: request.body.html,
@@ -87,7 +87,7 @@ app.post("/tenthquery", (request, _response, _next) => {
     let errorValidation = validation.tenthForm.validate(request.body);
     console.log(errorValidation, 'salam');
     if (!errorValidation.error) {
-        object = {
+        let object = {
             username: request.body.username,
             higher: request.body.higher,
             science: request.body.science,
@@ -113,7 +113,7 @@ app.post("/twelthquery", (request, _response, _next) => {
     let errorValidation = validation.twelthForm.validate(request.body);
     console.log(errorValidation, 'namaskaram');
     if (!errorValidation.error) {
-        object = {
+        let object = {
             username: request.body.username,
             science: request.body.science,
             physics: request.body.physics,
@@ -138,7 +138,7 @@ app.post("/counselling", (request, _response, _next) => {
     let errorValidation = validation.counsellingForm.validate(request.body);
     console.log(errorValidation, 'namaskaram');
     if (!errorValidation.error) {
-        object = {
+        let object = {
             username: request.body.username,
             phone: request.body.phone,
             email: request.body.email,
