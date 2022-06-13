@@ -7,9 +7,8 @@ app.use(express.static("public"));
 const port = 8000;
 const winlogger = require("./logger/logger");
 const { body, validationResult } = require('express-validator')
-var login = {};
 const file = require("fs");
-var nodemailer = require('nodemailer');
+const nodemailer = require('nodemailer');
 const { object } = require("joi");
 const cors = require("cors");
 const dbconnection = require("./db");
@@ -27,18 +26,18 @@ app.use(
         origin: "http://localhost:4200",
     })
 );
-var session = require('express-session');
+const session = require('express-session');
 app.use(session({
     secret: '2C44-4D44-WppQ38S',
     resave: true,
     saveUninitialized: true
 }));
-app.post("/postquery", (request, response, next) => {
+app.post("/postquery", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.signupForm.validate(request.body);
     console.log(errorValidation, 'hello');
     if (!errorValidation.error) {
-        var object = {
+        object = {
             username: request.body.username,
             phone: request.body.phone,
             email: request.body.email,
@@ -55,12 +54,12 @@ app.post("/postquery", (request, response, next) => {
 
 });
 
-app.post("/testquery", (request, response, next) => {
+app.post("/testquery", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.testForm.validate(request.body);
     console.log(errorValidation, 'hi');
     if (!errorValidation.error) {
-        var object = {
+        object = {
             username: request.body.username,
             javascript: request.body.javascript,
             html: request.body.html,
@@ -83,12 +82,12 @@ app.post("/testquery", (request, response, next) => {
 
 });
 
-app.post("/tenthquery", (request, response, next) => {
+app.post("/tenthquery", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.tenthForm.validate(request.body);
     console.log(errorValidation, 'salam');
     if (!errorValidation.error) {
-        var object = {
+        object = {
             username: request.body.username,
             higher: request.body.higher,
             science: request.body.science,
@@ -109,12 +108,12 @@ app.post("/tenthquery", (request, response, next) => {
 
 
 });
-app.post("/twelthquery", (request, response, next) => {
+app.post("/twelthquery", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.twelthForm.validate(request.body);
     console.log(errorValidation, 'namaskaram');
     if (!errorValidation.error) {
-        var object = {
+        object = {
             username: request.body.username,
             science: request.body.science,
             physics: request.body.physics,
@@ -134,12 +133,12 @@ app.post("/twelthquery", (request, response, next) => {
         winlogger.info('error', errorValidation);
     }
 });
-app.post("/counselling", (request, response, next) => {
+app.post("/counselling", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.counsellingForm.validate(request.body);
     console.log(errorValidation, 'namaskaram');
     if (!errorValidation.error) {
-        var object = {
+        object = {
             username: request.body.username,
             phone: request.body.phone,
             email: request.body.email,
