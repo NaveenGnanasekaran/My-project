@@ -209,37 +209,18 @@ app.get("/getUserId/:id", (request, response) => {
 
 
 
-app.delete("/delete/:id/:id1", (request, response) => {
-    dbconnection
-        .del_id(request.params.id, request.params.id1, "career_signup")
-        .then((_res1) => {
-            if (_res1) {
-                response.send(_res1);
-            } else {
-                response.send("error");
-            }
-        });
-});
+
 
 app.get("/getadmin", (request, response) => {
     console.log(request);
-    var data = {
+    let data = {
         selector: {
             type: "adminid",
         },
     };
-    dbconnection.get(data, "career_signup").then((res) => {
-        if (res) {
-            response.send(res);
-        } else {
-            response.send("error");
-        }
-    });
-});
-app.get("/getadminId/:id", (request, response) => {
-    dbconnection.getId(request.params.id, "career_signup").then((res) => {
-        if (res) {
-            response.send(res);
+    dbconnection.get(data, "career_signup").then((_res1) => {
+        if (_res1) {
+            response.send(_res1);
         } else {
             response.send("error");
         }
