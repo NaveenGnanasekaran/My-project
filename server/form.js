@@ -159,7 +159,7 @@ app.post("/counselling", (request, response, next) => {
             from: 'visionacademy813@gmail.com',
             to: object.email,
             subject: 'Counselling',
-            text: 'Booking successful! Here your meeting-link: meet.google.com/ffd-awrj-ydw',
+            text: 'Booking successful! Here your meeting-link: meet.google.com/ffd-awrj-ydw   and timing &trainer is' + object.time,
 
         };
         dbconnection.insert(object);

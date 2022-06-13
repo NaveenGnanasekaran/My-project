@@ -13,11 +13,7 @@ var mailOptions = {
     to: 'naveengnanasekaran8@gmail.com',
     subject: 'Sending Email using Node.js',
     text: 'Gnanasekaran R',
-    // attachments: [
-    //     {
-    //         path: '\My-project\career-planning\src\images'
-    //     }
-    // ]
+
 };
 
 transporter.sendMail(mailOptions, function (error, info) {
