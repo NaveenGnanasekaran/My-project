@@ -26,7 +26,6 @@ app.use(
         origin: "http://localhost:4200",
     })
 );
-const session = require('express-session');
 app.use(session({
     secret: '2C44-4D44-WppQ38S',
     resave: true,
@@ -146,7 +145,7 @@ app.post("/counselling", (request, _response, _next) => {
             time: request.body.time,
             type: "counselling",
         }
-        var transporter = nodemailer.createTransport({
+        let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
                 user: 'visionacademy813@gmail.com',
@@ -154,7 +153,7 @@ app.post("/counselling", (request, _response, _next) => {
             }
         });
 
-        var mailOptions = {
+        let mailOptions = {
             from: 'visionacademy813@gmail.com',
             to: object.email,
             subject: 'Counselling',
@@ -178,7 +177,7 @@ app.post("/counselling", (request, _response, _next) => {
 
 app.get("/getUser", (request, response) => {
     console.log(request);
-    var data = {
+    let data = {
         selector: {
             type: "user",
         },
@@ -197,9 +196,9 @@ app.get("/getUser", (request, response) => {
 
 });
 app.get("/getUserId/:id", (request, response) => {
-    dbconnection.getId(request.params.id, "career_signup").then((res) => {
-        if (res) {
-            response.send(res);
+    dbconnection.getId(request.params.id, "career_signup").then((_res) => {
+        if (_res) {
+            response.send(_res);
         } else {
             response.send("error");
         }
@@ -213,9 +212,9 @@ app.get("/getUserId/:id", (request, response) => {
 app.delete("/delete/:id/:id1", (request, response) => {
     dbconnection
         .del_id(request.params.id, request.params.id1, "career_signup")
-        .then((res) => {
-            if (res) {
-                response.send(res);
+        .then((_res1) => {
+            if (_res1) {
+                response.send(_res1);
             } else {
                 response.send("error");
             }
