@@ -24,7 +24,6 @@ import { WebDevComponent } from './web-dev/web-dev.component';
 import { AppDevComponent } from './app-dev/app-dev.component';
 import { MobDevComponent } from './mob-dev/mob-dev.component';
 import { DtSciComponent } from './dt-sci/dt-sci.component';
-import { PiechartComponent } from './piechart/piechart.component';
 import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { CounsellingComponent } from './counselling/counselling.component';
@@ -54,7 +53,6 @@ import { BookingComponent } from './booking/booking.component';
     AppDevComponent,
     MobDevComponent,
     DtSciComponent,
-    PiechartComponent,
     CounsellingComponent,
     BookingComponent,
   ],
