@@ -46,9 +46,6 @@ export class TwelthStudentsComponent implements OnInit {
         this.router.navigate(['/solution2']);
         console.log('pcm')
       }
-      else {
-        alert('select correct values')
-      }
 
     }
     else if (Formvalue.science == 0) {
