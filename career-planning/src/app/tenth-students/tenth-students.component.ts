@@ -55,9 +55,7 @@ export class TenthStudentsComponent implements OnInit {
         else if (Formvalue.tech == 1) {
           this.router.navigate(['/dtsci']);
         }
-        else {
-          alert('please select respected values!')
-        }
+
       }
       else if (Formvalue.diploma == 1) {
         if (Formvalue.polytechnic == 1) {
@@ -66,9 +64,7 @@ export class TenthStudentsComponent implements OnInit {
         else if (Formvalue.vocation == 1) {
           this.router.navigate(['/appdev']);
         }
-        else {
-          alert('please select respected values!')
-        }
+
       }
     }
     else {
