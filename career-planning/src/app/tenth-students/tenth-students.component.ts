@@ -57,7 +57,7 @@ export class TenthStudentsComponent implements OnInit {
         }
 
       }
-      else if (Formvalue.diploma == 1) {
+      else {
         if (Formvalue.polytechnic == 1) {
           this.router.navigate(['/solution2']);
         }
