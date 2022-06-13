@@ -1,5 +1,4 @@
 const Cloudant = require("@cloudant/cloudant");
-const { data } = require("./logger/logger");
 let url =
     "https://75b0afe3-3fa7-477b-8352-bdcfcd522a16-bluemix.cloudantnosqldb.appdomain.cloud/";
 let username = "apikey-v2-2djdlrrbf736ap4aa6rlre2x1j1wf65v1ti1e8x2bihn";
@@ -20,20 +19,20 @@ let insert = function (paramsvalue) {
         });
 };
 
-find = function (blockdata, dbname) {
+let find = function (blockdata, dbname) {
     return cloudant.use(dbname).find(blockdata);
 };
 
-get = function (admindata, dbname) {
+let get = function (admindata, dbname) {
     return cloudant.use(dbname).find(admindata);
 };
-getbill = function (dbname) {
+let getbill = function (dbname) {
     return cloudant.use(dbname).list();
 };
-getId = function (id, dbname) {
+let getId = function (id, dbname) {
     return cloudant.use(dbname).get(id);
 };
-del_id = function (id, id1, dbname) {
+let del_id = function (id, id1, dbname) {
     return cloudant.use(dbname).destroy(id, id1);
 };
 
