@@ -19,6 +19,7 @@ export class CounsellingComponent implements OnInit {
       phone: ['', Validators.required],
       email: ['', Validators.required],
       qualification: ['', Validators.required],
+      counsellor: ['', Validators.required],
       time: ['', Validators.required]
     })
   }

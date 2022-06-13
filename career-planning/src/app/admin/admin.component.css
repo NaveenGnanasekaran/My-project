@@ -7,11 +7,10 @@ body {
     background-attachment: fixed;
     background-size: cover;
     overflow-x: hidden;
-    margin-top: 4%;
 }
 
-.container mt-5 {
-    background-color: antiquewhite;
+.container {
+    /* background-color: rgb(116, 89, 54); */
     margin-top: 10%;
 }
 

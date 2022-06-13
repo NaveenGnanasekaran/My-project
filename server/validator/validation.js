@@ -51,11 +51,8 @@ const counsellingForm = joi.object({
     phone: joi.number().required(),
     email: joi.string().email().regex(/^([\w]*[\w\.]*(?!\.)@gmail.com)/).required(),
     qualification: joi.string().required(),
+    counsellor: joi.required(),
     time: joi.required()
-
-
-
-
 })
 
 module.exports = { signupForm, testForm, tenthForm, twelthForm, counsellingForm }

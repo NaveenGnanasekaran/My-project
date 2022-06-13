@@ -77,7 +77,7 @@ export class ApiServiceService {
   }
 
   //admin
-  getadmin() {
+  getAdmin() {
     return this.http.get('http://localhost:8000/getadmin/');
   }
   getadminId(id: any) {

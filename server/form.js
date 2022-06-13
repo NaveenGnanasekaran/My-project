@@ -13,7 +13,6 @@ const { object1 } = require("joi");
 const cors = require("cors");
 const dbconnection = require("./db");
 const { Router } = require("express");
-const res = require("express/lib/response");
 const req = require("express/lib/request");
 const validation = require("./validator/validation");
 const controller = require('./controller/careercontroller')
@@ -142,6 +141,7 @@ app.post("/counselling", (request, _response, _next) => {
             phone: request.body.phone,
             email: request.body.email,
             qualification: request.body.qualification,
+            counsellor: request.body.counsellor,
             time: request.body.time,
             type: "counselling",
         }
@@ -157,7 +157,7 @@ app.post("/counselling", (request, _response, _next) => {
             from: 'visionacademy813@gmail.com',
             to: object.email,
             subject: 'Counselling',
-            text: 'Booking successful! Here your meeting-link: meet.google.com/ffd-awrj-ydw   and timing &trainer is' + object.time,
+            text: `Booking successful! Here your meeting-link: meet.google.com/ffd-awrj-ydw   and timing  is ${object.time} and your counsellor is ${object.counsellor}`
 
         };
         dbconnection.insert(object);
@@ -215,16 +215,18 @@ app.get("/getadmin", (request, response) => {
     console.log(request);
     let data = {
         selector: {
-            type: "adminid",
+            type: "admin",
         },
     };
-    dbconnection.get(data, "career_signup").then((_res1) => {
-        if (_res1) {
-            response.send(_res1);
-        } else {
-            response.send("error");
+    controller.adminlogincheck(data).then((respond) => {
+        if (respond) {
+            console.log("Data fetched", respond);
+            response.json(respond)
         }
-    });
+        else {
+            response.status(404).send({ fail: "Admin login authentication failed" });
+        }
+    })
 });
 
 

@@ -21,6 +21,7 @@ import { AppDevComponent } from './app-dev/app-dev.component';
 import { CounsellingComponent } from './counselling/counselling.component';
 import { BookingComponent } from './booking/booking.component';
 const routes: Routes = [
+  { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
   { path: 'solution', component: SolutionComponent },
   { path: 'bookery', component: BookeryComponent },

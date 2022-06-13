@@ -41,8 +41,6 @@ module.exports = {
     getId,
     insert,
     getbill,
-    insert1,
-    insert2,
     find,
     del_id,
 };
