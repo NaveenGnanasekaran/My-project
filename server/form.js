@@ -33,7 +33,6 @@ app.use(session({
 app.post("/postquery", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.signupForm.validate(request.body);
-    console.log(errorValidation, 'hello');
     if (!errorValidation.error) {
         let object = {
             username: request.body.username,
@@ -55,7 +54,6 @@ app.post("/postquery", (request, _response, _next) => {
 app.post("/testquery", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.testForm.validate(request.body);
-    console.log(errorValidation, 'hi');
     if (!errorValidation.error) {
         let object = {
             username: request.body.username,
@@ -83,7 +81,6 @@ app.post("/testquery", (request, _response, _next) => {
 app.post("/tenthquery", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.tenthForm.validate(request.body);
-    console.log(errorValidation, 'salam');
     if (!errorValidation.error) {
         let object = {
             username: request.body.username,
@@ -109,7 +106,6 @@ app.post("/tenthquery", (request, _response, _next) => {
 app.post("/twelthquery", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.twelthForm.validate(request.body);
-    console.log(errorValidation, 'namaskaram');
     if (!errorValidation.error) {
         let object = {
             username: request.body.username,
@@ -134,7 +130,6 @@ app.post("/twelthquery", (request, _response, _next) => {
 app.post("/counselling", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.counsellingForm.validate(request.body);
-    console.log(errorValidation, 'namaskaram');
     if (!errorValidation.error) {
         let object = {
             username: request.body.username,
@@ -176,7 +171,6 @@ app.post("/counselling", (request, _response, _next) => {
 app.post("/contact", (request, _response, _next) => {
     console.log(request);
     let errorValidation = validation.contactForm.validate(request.body);
-    console.log(errorValidation, 'namaskaram');
     if (!errorValidation.error) {
         let object = {
             name: request.body.name,
