@@ -21,7 +21,6 @@ import { CollegeStudentsComponent } from './college-students/college-students.co
 import { SolutionPart2Component } from './solution-part2/solution-part2.component';
 import { WebDevComponent } from './web-dev/web-dev.component';
 import { AppDevComponent } from './app-dev/app-dev.component';
-import { MobDevComponent } from './mob-dev/mob-dev.component';
 import { DtSciComponent } from './dt-sci/dt-sci.component';
 import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
@@ -55,7 +54,6 @@ import { ListfeedbackComponent } from './listfeedback/listfeedback.component';
     SolutionPart2Component,
     WebDevComponent,
     AppDevComponent,
-    MobDevComponent,
     DtSciComponent,
     CounsellingComponent,
     BookingComponent,
