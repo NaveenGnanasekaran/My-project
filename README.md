@@ -43,21 +43,17 @@ Career Guidance System Software (CGS) is the most modern system to Find your per
 
 5.  Login --> Only registered users can login for further use.
 
-6.  Add User --> Add the User details to manage.
+6.  List User --> Lists  all the  user details they have provided.
 
-7.  List User --> Lists  all the  user details they have provided.
+7.  Admin --> Only admin have the access to this login.
 
-8.  Admin --> Only admin have the access to this login.
+8.  List feedbacks --> Lists  all the  user feedbacks they have provided.
 
-9.  Add User --> Add the User details to manage.
+9. Take Test --> Take the self evaluation test to find out which carrier is suitable for you.
 
-10.  List feedbacks --> Lists  all the  user feedbacks they have provided.
+10.  Book counselling --> Book the counselling by selecting the prefferred time and select your trainer.
 
-11. Take Test --> Take the sel f evaluation test to find out which carrier is suitable for you.
-
-12.  Book counselling --> Book the counselling by selecting the prefferred time and select your trainer.
-
-13.  Bookery --> Trending courses links are provided for improving your carrier.
+11.  Bookery --> Trending courses links are provided for improving your carrier.
 
 
 # Install and run it locally
