@@ -6,7 +6,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { ContactComponent } from './contact/contact.component';
-import { PartnershipsComponent } from './partnerships/partnerships.component';
 import { AboutComponent } from './about/about.component';
 import { SolutionComponent } from './solution/solution.component';
 import { BookeryComponent } from './bookery/bookery.component';
@@ -43,7 +42,6 @@ import { ListfeedbackComponent } from './listfeedback/listfeedback.component';
     SignupComponent,
     LoginComponent,
     ContactComponent,
-    PartnershipsComponent,
     AboutComponent,
     SolutionComponent,
     BookeryComponent,

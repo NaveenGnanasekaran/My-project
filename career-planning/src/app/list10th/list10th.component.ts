@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
 
 @Component({
@@ -6,15 +6,13 @@ import { ApiServiceService } from '../api-service.service';
   templateUrl: './list10th.component.html',
   styleUrls: ['./list10th.component.css']
 })
-export class List10thComponent implements OnInit {
+export class List10thComponent {
   alldata: any;
   object: any = [];
 
   constructor(private api: ApiServiceService) {
   }
 
-  ngOnInit(): void {
-  }
 
   getuser2() {
     this.api.getUser2().subscribe(data => {

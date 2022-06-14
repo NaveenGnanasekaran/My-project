@@ -1,18 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-web-dev',
   templateUrl: './web-dev.component.html',
   styleUrls: ['./web-dev.component.css']
 })
-export class WebDevComponent implements OnInit {
+export class WebDevComponent {
 
   constructor() {
     console.log('');
   }
 
-  ngOnInit(): void {
-    console.log('');
-  }
+
 
 }

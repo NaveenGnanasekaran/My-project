@@ -1,20 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-// import { FormGroup, FormBuilder, NgForm, FormControl } from '@angular/forms';
+import { Component } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
 @Component({
   selector: 'app-listfeedbacks',
   templateUrl: './listfeedbacks.component.html',
   styleUrls: ['./listfeedbacks.component.css']
 })
-export class ListfeedbacksComponent implements OnInit {
+export class ListfeedbacksComponent {
   alldata: any;
   object: any = [];
 
   constructor(private api: ApiServiceService) {
   }
 
-  ngOnInit(): void {
-  }
+
 
 
   getuser1() {

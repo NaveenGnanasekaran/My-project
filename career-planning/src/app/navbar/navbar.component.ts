@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
 import { Router } from '@angular/router';
 
@@ -7,16 +7,12 @@ import { Router } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
   constructor(public header: ApiServiceService, private router: Router) {
 
   }
 
-  ngOnInit(): void {
-    console.log('');
-
-  }
   logout() {
     this.header.hide = false;
     this.header.show = true;

@@ -1,19 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-bookery',
   templateUrl: './bookery.component.html',
   styleUrls: ['./bookery.component.css']
 })
-export class BookeryComponent implements OnInit {
+export class BookeryComponent {
 
   constructor() {
     console.log('');
   }
-
-  ngOnInit(): void {
-    console.log('');
-
-  }
-
 }

@@ -1,19 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dt-sci',
   templateUrl: './dt-sci.component.html',
   styleUrls: ['./dt-sci.component.css']
 })
-export class DtSciComponent implements OnInit {
+export class DtSciComponent {
 
   constructor() {
     console.log('');
   }
 
-  ngOnInit(): void {
-    console.log('');
 
-  }
 
 }
