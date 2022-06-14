@@ -25,14 +25,14 @@ const logincheck = (data) => {
 
 
 }
-const adminlogincheck = (data) => {
+const adminlogincheck = (data1) => {
 
 
 
     return new Promise((resolve, reject) => {
 
-        if (data) {
-            let returnValue = db.get(data, "career_signup").then((res) => {
+        if (data1) {
+            let returnValue = db.get(data1, "career_signup").then((res) => {
                 return res;
             }).catch(error => {
                 winlogger.error('Login is invalid!', error);
