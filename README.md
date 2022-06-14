@@ -1,6 +1,4 @@
-# Title
-
-Career Guidance System (CGS)
+# Career Guidance System (CGS)
 
 # Description
 
