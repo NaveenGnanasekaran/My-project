@@ -226,46 +226,46 @@ app.get("/getUser1", (request, response) => {
 
 
 });
-app.get("/getUser2", (request, response) => {
-    console.log(request);
+app.get("/getUser2", (request1, response1) => {
+    console.log(request1);
     let data = {
         selector: {
             type: "tenthdata",
         },
     };
-    controller.testdatacheck(data).then((respond) => {
-        if (respond) {
-            console.log("Data fetched", respond);
-            response.json(respond)
+    controller.testdatacheck(data).then((respond1) => {
+        if (respond1) {
+            console.log("Data fetched", respond1);
+            response1.json(respond1)
 
         }
         else {
-            response.status(404).send({ fail: "Fetching is failed" });
+            response1.status(404).send({ fail: "Fetching is failed" });
         }
     })
 
 });
-app.get("/getUser3", (request, response) => {
-    console.log(request);
+app.get("/getUser3", (request2, response2) => {
+    console.log(request2);
     let data = {
         selector: {
             type: "counselling",
         },
     };
-    controller.testdatacheck(data).then((respond) => {
-        if (respond) {
-            console.log("Data fetched", respond);
-            response.json(respond)
+    controller.testdatacheck(data).then((respond2) => {
+        if (respond2) {
+            console.log("Data fetched", respond2);
+            response2.json(respond2)
 
         }
         else {
-            response.status(404).send({ fail: "Fetching is failed" });
+            response2.status(404).send({ fail: "Fetching is failed" });
         }
     })
 
 });
-app.get("/getUser4", (request, response) => {
-    console.log(request);
+app.get("/getUser4", (request3, response3) => {
+    console.log(request3);
     let data = {
         selector: {
             type: "twelthdata",
@@ -274,17 +274,17 @@ app.get("/getUser4", (request, response) => {
     controller.testdatacheck(data).then((respond) => {
         if (respond) {
             console.log("Data fetched", respond);
-            response.json(respond)
+            response3.json(respond)
 
         }
         else {
-            response.status(404).send({ fail: "Fetching is failed" });
+            response3.status(404).send({ fail: "Fetching is failed" });
         }
     })
 
 });
-app.get("/getUser5", (request, response) => {
-    console.log(request);
+app.get("/getUser5", (request4, response4) => {
+    console.log(request4);
     let data = {
         selector: {
             type: "feedback",
@@ -293,11 +293,11 @@ app.get("/getUser5", (request, response) => {
     controller.testdatacheck(data).then((respond) => {
         if (respond) {
             console.log("Data fetched", respond);
-            response.json(respond)
+            response4.json(respond)
 
         }
         else {
-            response.status(404).send({ fail: "Fetching is failed" });
+            response4.status(404).send({ fail: "Fetching is failed" });
         }
     })
 
