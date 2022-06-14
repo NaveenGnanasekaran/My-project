@@ -173,7 +173,24 @@ app.post("/counselling", (request, _response, _next) => {
         winlogger.info('error', errorValidation);
     }
 });
-
+app.post("/contact", (request, _response, _next) => {
+    console.log(request);
+    let errorValidation = validation.contactForm.validate(request.body);
+    console.log(errorValidation, 'namaskaram');
+    if (!errorValidation.error) {
+        let object = {
+            name: request.body.name,
+            email: request.body.email,
+            phone: request.body.phone,
+            txt: request.body.txt,
+            type: "feedback",
+        }
+        dbconnection.insert(object);
+    }
+    else {
+        winlogger.info('error', errorValidation);
+    }
+});
 
 app.get("/getUser", (request, response) => {
     console.log(request);
@@ -193,6 +210,102 @@ app.get("/getUser", (request, response) => {
         }
     })
 
+
+});
+app.get("/getUser1", (request, response) => {
+    console.log(request);
+    let data = {
+        selector: {
+            type: "testdata",
+        },
+    };
+    controller.testdatacheck(data).then((respond) => {
+        if (respond) {
+            console.log("Data fetched", respond);
+            response.json(respond)
+
+        }
+        else {
+            response.status(404).send({ fail: "Fetching is failed" });
+        }
+    })
+
+
+});
+app.get("/getUser2", (request, response) => {
+    console.log(request);
+    let data = {
+        selector: {
+            type: "tenthdata",
+        },
+    };
+    controller.testdatacheck(data).then((respond) => {
+        if (respond) {
+            console.log("Data fetched", respond);
+            response.json(respond)
+
+        }
+        else {
+            response.status(404).send({ fail: "Fetching is failed" });
+        }
+    })
+
+});
+app.get("/getUser3", (request, response) => {
+    console.log(request);
+    let data = {
+        selector: {
+            type: "counselling",
+        },
+    };
+    controller.testdatacheck(data).then((respond) => {
+        if (respond) {
+            console.log("Data fetched", respond);
+            response.json(respond)
+
+        }
+        else {
+            response.status(404).send({ fail: "Fetching is failed" });
+        }
+    })
+
+});
+app.get("/getUser4", (request, response) => {
+    console.log(request);
+    let data = {
+        selector: {
+            type: "twelthdata",
+        },
+    };
+    controller.testdatacheck(data).then((respond) => {
+        if (respond) {
+            console.log("Data fetched", respond);
+            response.json(respond)
+
+        }
+        else {
+            response.status(404).send({ fail: "Fetching is failed" });
+        }
+    })
+
+});
+app.get("/getUser5", (request, response) => {
+    console.log(request);
+    let data = {
+        selector: {
+            type: "feedback",
+        },
+    };
+    controller.testdatacheck(data).then((respond) => {
+        if (respond) {
+            console.log("Data fetched", respond);
+            response.json(respond)
+
+        }
+        else {
+            response.status(404).send({ fail: "Fetching is failed" });
+        }
+    })
 
 });
 app.get("/getUserId/:id", (request, response) => {
@@ -228,7 +341,20 @@ app.get("/getadmin", (request, response) => {
         }
     })
 });
-
+app.delete("/delete/:id/:id1", (request, response) => {
+    dbconnection
+        .del_id(request.params.id, request.params.id1, "career_signup")
+        .then((res_5) => {
+            if (res_5) {
+                response.send(res_5);
+            } else {
+                response.send("error");
+            }
+        })
+        .catch((err) => {
+            console.log("UserNot exist!!!", err);
+        });
+});
 
 app.listen(port, (err) => {
     if (err) {

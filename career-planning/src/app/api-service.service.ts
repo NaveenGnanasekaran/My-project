@@ -22,23 +22,7 @@ export class ApiServiceService {
     return this.http.post("http://localhost:8000/contact", formobject)
 
   }
-  // getUser() {
-  //   return this.http.get('http://localhost:8000/getUser/');
-  // }
-  // getUserId(id: any) {
-  //   return this.http.get(`http://localhost:8000/getUserId/${id}`);
-  // }
 
-  // remove(id: any, id1: any) {
-  //   return this.http.delete(`http://localhost:8000/delete/${id}/${id1}`);
-  // }
-
-  // getadmin() {
-  //   return this.http.get('http://localhost:8000/getadmin/');
-  // }
-  // logindata(id: any) {
-  //   return this.http.get(`http://localhost:8000/get_all_query/${id}`);
-  // }
 
 
   signupdata(formobject: any) {
@@ -58,9 +42,26 @@ export class ApiServiceService {
   }
 
 
+
   getUser() {
     return this.http.get('http://localhost:8000/getUser/');
   }
+  getUser1() {
+    return this.http.get('http://localhost:8000/getUser1/');
+  }
+  getUser2() {
+    return this.http.get('http://localhost:8000/getUser2/');
+  }
+  getUser3() {
+    return this.http.get('http://localhost:8000/getUser3/');
+  }
+  getUser4() {
+    return this.http.get('http://localhost:8000/getUser4/');
+  }
+  getUser5() {
+    return this.http.get('http://localhost:8000/getUser5/');
+  }
+
   getUserId(id: any) {
     return this.http.get(`http://localhost:8000/getUserId/${id}`);
   }
@@ -75,7 +76,6 @@ export class ApiServiceService {
   remove(id: any, id1: any) {
     return this.http.delete(`http://localhost:8000/delete/${id}/${id1}`);
   }
-
   //admin
   getAdmin() {
     return this.http.get('http://localhost:8000/getadmin/');

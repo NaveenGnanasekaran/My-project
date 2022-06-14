@@ -68,4 +68,25 @@ a {
     margin-top: 30px;
     margin-bottom: 20px;
 
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: black;
+    padding-top: 30px;
+    text-shadow: 2px 2px 5px black;
+
+
+}
+
+.container .video-tutorials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    grid-gap: 30px;
+    margin-left: 80px;
+}
+
+.container .video-tutorials img {
+    border-radius: 30px;
 }

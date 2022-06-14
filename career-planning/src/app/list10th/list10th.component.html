@@ -1,0 +1,42 @@
+<div class="background">
+    <div class="container">
+        <h1>Class 10th</h1>
+        <div class="fetch">
+            <table class="table" aria-label="table">
+                <thead class="text-dark">
+                    <tr>
+                        <th scope="col">Username</th>
+                        <th scope="col">Higher</th>
+                        <th scope="col">Science</th>
+                        <th scope="col">Arts</th>
+                        <th scope="col">Commerce</th>
+                        <th scope="col">ITI</th>
+                        <th scope="col">Tech</th>
+                        <th scope="col">Diploma</th>
+                        <th scope="col">Polytechnic</th>
+                        <th scope="col">Vocation</th>
+
+                    </tr>
+                </thead>
+                <tbody class="text-dark">
+                    <tr *ngFor="let obj of object">
+                        <td class="name">{{obj.username}}</td>
+                        <td>{{obj.higher}}</td>
+                        <td>{{obj.science}}</td>
+                        <td>{{obj.arts}}</td>
+                        <td>{{obj.commerce}}</td>
+                        <td>{{obj.iti}}</td>
+                        <td>{{obj.tech}}</td>
+                        <td>{{obj.diploma}}</td>
+                        <td>{{obj.polytechnic}}</td>
+                        <td>{{obj.vocation}}</td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button (click)="getuser2()">fetch</button>
+
+    </div>
+</div>

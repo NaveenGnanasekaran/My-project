@@ -28,6 +28,12 @@ import { HttpCallInterceptor } from './interceptor';
 import { ToastrModule } from 'ngx-toastr';
 import { CounsellingComponent } from './counselling/counselling.component';
 import { BookingComponent } from './booking/booking.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { ListfeedbacksComponent } from './listfeedbacks/listfeedbacks.component';
+import { List10thComponent } from './list10th/list10th.component';
+import { List12thComponent } from './list12th/list12th.component';
+import { ListcounsellingComponent } from './listcounselling/listcounselling.component';
+import { ListfeedbackComponent } from './listfeedback/listfeedback.component';
 
 
 @NgModule({
@@ -55,6 +61,12 @@ import { BookingComponent } from './booking/booking.component';
     DtSciComponent,
     CounsellingComponent,
     BookingComponent,
+    AdmindashboardComponent,
+    ListfeedbacksComponent,
+    List10thComponent,
+    List12thComponent,
+    ListcounsellingComponent,
+    ListfeedbackComponent,
   ],
   imports: [
     BrowserModule,

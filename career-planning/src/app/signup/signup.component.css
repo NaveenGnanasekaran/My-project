@@ -5,7 +5,12 @@
 }
 
 body {
-    background-color: skyblue;
+    background-color: rgb(44, 44, 44);
+}
+
+form {
+    min-height: 100vh;
+    margin-top: 80px;
 }
 
 h1 {
@@ -13,10 +18,31 @@ h1 {
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
-    color: black;
+    color: white;
     padding-top: 30px;
     text-shadow: 2px 2px 5px black;
 
+}
+
+.field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 600px;
+    margin-left: 200px;
+    padding: 10px;
+}
+
+input {
+    width: 400px;
+}
+
+label {
+    color: yellow;
+    text-shadow: 2px 2px 5px black;
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
 }
 
 img {
@@ -26,4 +52,6 @@ img {
 
 button {
     margin-left: 30px;
+    background-color: black;
+    color: white;
 }

@@ -7,6 +7,7 @@ button a {
 
 form {
     min-height: 30vh;
+    width: 1400px;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
     font-weight: 800;
     text-transform: uppercase;
     text-align: center;
-    color: black;
+    color: white;
     padding-top: 30px;
     text-shadow: 2px 2px 5px black;
 
@@ -22,12 +23,33 @@ h1 {
 }
 
 body {
-    background-color: skyblue;
+    background-color: rgb(44, 44, 44);
+    /* background-color: #111; */
     min-height: 100vh;
+    overflow: hidden;
+
+
+}
+
+.field {
+    padding: 20px;
+    margin-left: 300px;
+}
+
+.field label {
+    font-weight: 500;
+    color: white;
+
+}
+
+input {
+    width: 400px;
 }
 
 button {
     background-color: black;
     color: white;
     margin-top: 50px;
+    margin-left: 350px;
+
 }

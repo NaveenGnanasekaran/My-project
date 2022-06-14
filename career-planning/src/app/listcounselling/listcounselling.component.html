@@ -1,16 +1,16 @@
 <div class="background">
     <div class="container">
-        <h1>Users</h1>
+        <h1>Counselling</h1>
         <div class="fetch">
             <table class="table" aria-label="table">
                 <thead class="text-dark">
                     <tr>
                         <th scope="col">Username</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">Email id</th>
-                        <th scope="col">Password</th>
-                        <th scope="col">delete</th>
-
+                        <th scope="col">Email</th>
+                        <th scope="col">Qualification</th>
+                        <th scope="col">Counsellor</th>
+                        <th scope="col">Time</th>
                     </tr>
                 </thead>
                 <tbody class="text-dark">
@@ -18,15 +18,14 @@
                         <td class="name">{{obj.username}}</td>
                         <td>{{obj.phone}}</td>
                         <td>{{obj.email}}</td>
-                        <td>{{obj.password}}</td>
-
-                        <td><button class="delete" (click)="deleteuser(obj,obj)">Delete</button></td>
-
+                        <td>{{obj.qualification}}</td>
+                        <td>{{obj.counsellor}}</td>
+                        <td>{{obj.time}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <button (click)="getuser()">fetch</button>
+        <button (click)="getuser3()">fetch</button>
 
     </div>
 </div>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a [routerLink]="['/listcounselling']">Counselling</a>
+        <a [routerLink]="['/listfeedbacks']">Graduates</a>
+        <a [routerLink]="['/list10th']">10th Students</a>
+        <a [routerLink]="['/list12th']">12th Students</a>
+        <a [routerLink]="['/dashboard']">Users</a>
+
+    </div>
+
+    <div class="main">
+        <h1>Admin Dashboard</h1>
+        <div class="card">
+            <div class="card1">
+                <a [routerLink]="['/signup']"><img src="../../images/sign-up.png" alt=""></a>
+                <h3>Add user</h3>
+
+            </div>
+            <div class="card2">
+                <a [routerLink]="['/dashboard']"><img src="../../images/user.png" alt=""></a>
+
+                <h3>View users</h3>
+            </div>
+            <div class="card3">
+                <a [routerLink]="['/listfeedback']"><img src="../../images/icons8-feedback-50.png" alt=""></a>
+                <h3>Feedbacks</h3>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
+<app-footer></app-footer>

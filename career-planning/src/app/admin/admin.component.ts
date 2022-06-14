@@ -72,7 +72,7 @@ export class AdminComponent implements OnInit {
             this.api.showoff();
             alert('Valid User!')
 
-            this.router.navigate(['/dashboard']);
+            this.router.navigate(['/admindashboard']);
         } else {
 
             alert('Not a valid user');

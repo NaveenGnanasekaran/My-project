@@ -20,6 +20,12 @@ import { DtSciComponent } from './dt-sci/dt-sci.component';
 import { AppDevComponent } from './app-dev/app-dev.component';
 import { CounsellingComponent } from './counselling/counselling.component';
 import { BookingComponent } from './booking/booking.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { ListfeedbacksComponent } from './listfeedbacks/listfeedbacks.component';
+import { List10thComponent } from './list10th/list10th.component';
+import { ListcounsellingComponent } from './listcounselling/listcounselling.component';
+import { List12thComponent } from './list12th/list12th.component';
+import { ListfeedbackComponent } from './listfeedback/listfeedback.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'home', component: HomeComponent },
@@ -42,7 +48,12 @@ const routes: Routes = [
   { path: 'dtsci', component: DtSciComponent },
   { path: 'counselling', component: CounsellingComponent },
   { path: 'booking', component: BookingComponent },
-
+  { path: 'admindashboard', component: AdmindashboardComponent },
+  { path: 'listfeedbacks', component: ListfeedbacksComponent },
+  { path: 'listfeedback', component: ListfeedbackComponent },
+  { path: 'list10th', component: List10thComponent },
+  { path: 'list12th', component: List12thComponent },
+  { path: 'listcounselling', component: ListcounsellingComponent },
 
 
 ];

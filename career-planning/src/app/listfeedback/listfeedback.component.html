@@ -1,32 +1,27 @@
 <div class="background">
     <div class="container">
-        <h1>Users</h1>
+        <h1>User Feedbacks</h1>
         <div class="fetch">
             <table class="table" aria-label="table">
                 <thead class="text-dark">
                     <tr>
                         <th scope="col">Username</th>
+                        <th scope="col">Email</th>
                         <th scope="col">Phone</th>
-                        <th scope="col">Email id</th>
-                        <th scope="col">Password</th>
-                        <th scope="col">delete</th>
-
+                        <th scope="col">Feedback</th>
                     </tr>
                 </thead>
                 <tbody class="text-dark">
                     <tr *ngFor="let obj of object">
-                        <td class="name">{{obj.username}}</td>
-                        <td>{{obj.phone}}</td>
+                        <td class="name">{{obj.name}}</td>
                         <td>{{obj.email}}</td>
-                        <td>{{obj.password}}</td>
-
-                        <td><button class="delete" (click)="deleteuser(obj,obj)">Delete</button></td>
-
+                        <td>{{obj.phone}}</td>
+                        <td>{{obj.txt}}</td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <button (click)="getuser()">fetch</button>
+        <button (click)="getuser5()">fetch</button>
 
     </div>
 </div>

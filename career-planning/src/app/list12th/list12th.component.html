@@ -1,0 +1,44 @@
+<div class="background">
+    <div class="container">
+        <h1>Class 12th</h1>
+        <div class="fetch">
+            <table class="table" aria-label="table">
+                <thead class="text-dark">
+                    <tr>
+                        <th scope="col">Username</th>
+                        <th scope="col">Science</th>
+                        <th scope="col">Physics</th>
+                        <th scope="col">Chemistry</th>
+                        <th scope="col">Biology</th>
+                        <th scope="col">Maths</th>
+                        <th scope="col">Arts</th>
+                        <th scope="col">Humanity</th>
+                        <th scope="col">Business</th>
+                        <th scope="col">Accountancy</th>
+                        <th scope="col">Openstreams</th>
+
+                    </tr>
+                </thead>
+                <tbody class="text-dark">
+                    <tr *ngFor="let obj of object">
+                        <td class="name">{{obj.username}}</td>
+                        <td>{{obj.science}}</td>
+                        <td>{{obj.physics}}</td>
+                        <td>{{obj.chemistry}}</td>
+                        <td>{{obj.biology}}</td>
+                        <td>{{obj.maths}}</td>
+                        <td>{{obj.arts}}</td>
+                        <td>{{obj.humanity}}</td>
+                        <td>{{obj.business}}</td>
+                        <td>{{obj.accountancy}}</td>
+                        <td>{{obj.openstreams}}</td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button (click)="getuser4()">fetch</button>
+
+    </div>
+</div>

@@ -1,0 +1,42 @@
+<div class="background">
+    <div class="container">
+        <h1>Graduates marks</h1>
+        <div class="fetch">
+            <table class="table" aria-label="table">
+                <thead class="text-dark">
+                    <tr>
+                        <th scope="col">Username</th>
+                        <th scope="col">Javascript</th>
+                        <th scope="col">Html</th>
+                        <th scope="col">Css</th>
+                        <th scope="col">c</th>
+                        <th scope="col">Matlab</th>
+                        <th scope="col">Python</th>
+                        <th scope="col">Swift</th>
+                        <th scope="col">Objective C</th>
+                        <th scope="col">Javas</th>
+
+                    </tr>
+                </thead>
+                <tbody class="text-dark">
+                    <tr *ngFor="let obj of object">
+                        <td class="name">{{obj.username}}</td>
+                        <td>{{obj.javascript}}</td>
+                        <td>{{obj.html}}</td>
+                        <td>{{obj.css}}</td>
+                        <td>{{obj.c}}</td>
+                        <td>{{obj.matlab}}</td>
+                        <td>{{obj.python}}</td>
+                        <td>{{obj.swift}}</td>
+                        <td>{{obj.objectivec}}</td>
+                        <td>{{obj.java}}</td>
+
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <button (click)="getuser1()">fetch</button>
+
+    </div>
+</div>

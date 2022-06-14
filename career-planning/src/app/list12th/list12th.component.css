@@ -26,6 +26,7 @@ table {
     color: black;
     overflow: hidden;
     border-radius: 5px;
+    margin-left: -100px;
 }
 
 /* table tr:nth-child(odd) {

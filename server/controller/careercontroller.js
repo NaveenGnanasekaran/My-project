@@ -48,8 +48,31 @@ const adminlogincheck = (data) => {
 
 
 }
+const testdatacheck = (data) => {
+
+
+
+    return new Promise((resolve, reject) => {
+
+        if (data) {
+            let returnValue = db.get(data, "career_signup").then((res) => {
+                return res;
+            }).catch(error => {
+                winlogger.error(' invalid!', error);
+            })
+            return resolve(returnValue);
+        }
+        else {
+            return reject();
+        }
+
+
+    })
+
+
+}
 
 
 
 
-module.exports = { logincheck, adminlogincheck };
+module.exports = { logincheck, adminlogincheck, testdatacheck };

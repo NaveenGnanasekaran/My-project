@@ -39,7 +39,7 @@ export class ContactComponent implements OnInit {
   }
   adduser(Formvalue: NgForm) {
     console.log(Formvalue);
-    this.api.add(Formvalue).subscribe(data => {
+    this.api.adduser(Formvalue).subscribe(data => {
       console.log(data);
     })
     alert("data added");
