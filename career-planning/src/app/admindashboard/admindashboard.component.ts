@@ -7,7 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AdmindashboardComponent {
 
-  constructor() { }
+  constructor() {
+    console.log('')
+  }
 
 
 }
