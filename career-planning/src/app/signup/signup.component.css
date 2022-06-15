@@ -25,12 +25,13 @@ h1 {
 }
 
 .field {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     width: 600px;
-    margin-left: 200px;
+    margin-left: 300px;
     padding: 10px;
+}
+
+span {
+    margin-left: 30px;
 }
 
 input {
@@ -51,7 +52,7 @@ img {
 }
 
 button {
-    margin-left: 30px;
+    margin-left: -50px;
     background-color: black;
     color: white;
 }

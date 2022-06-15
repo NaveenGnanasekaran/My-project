@@ -66,6 +66,7 @@ export class DashboardComponent implements OnInit {
     this.api.remove(data._id, data1._rev).subscribe(_res => {
       console.log('Your data was Deleted from the database');
     })
+    location.reload();
 
   }
 

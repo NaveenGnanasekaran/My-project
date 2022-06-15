@@ -1,42 +1,55 @@
-body {
-    background-color: skyblue;
-    height: 91.5vh;
-    margin-left: 0px;
-    margin-right: 10px;
-    width: 100vw;
-    background-attachment: fixed;
-    background-size: cover;
-    overflow-x: hidden;
-}
-
-.container {
-    /* background-color: rgb(116, 89, 54); */
-    margin-top: 10%;
-}
-
-h1 {
-    padding-top: 30px;
-    font-size: 100px;
+button a {
+    text-decoration: none;
     font-weight: 800;
-    text-align: center;
-    color: black;
-    text-shadow: 2px 2px 5px black;
-    text-transform: uppercase;
-}
-
-.card,
-.card-1 {
-    background: white;
-    border: none;
-    width: 450px;
-    margin-bottom: 1.5rem;
-}
-
-.field,
-.buttons {
-    margin-top: 1rem;
+    color: red;
+    font-size: 30px;
 }
 
 form {
+    min-height: 30vh;
+    width: 1400px;
+}
+
+h1 {
+    font-size: 100px;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+    text-shadow: 2px 2px 5px black;
+
+
+}
+
+body {
+    background-color: rgb(44, 44, 44);
+    /* background-color: #111; */
+    min-height: 100vh;
+    overflow: hidden;
+
+
+}
+
+.field {
+    padding: 20px;
+    margin-left: 300px;
+}
+
+.field label {
+    font-weight: 500;
+    color: white;
+
+}
+
+input {
     width: 400px;
+}
+
+button {
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+    margin-left: 350px;
+
 }

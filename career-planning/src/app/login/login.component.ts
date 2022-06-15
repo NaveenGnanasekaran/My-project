@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
             username: ['', Validators.required],
             password: ['', [Validators.required, Validators.minLength(5)]],
         });
-
         this.api.getUser().subscribe((data) => {
             console.log(data);
 
@@ -42,6 +41,7 @@ export class LoginComponent implements OnInit {
 
             }
         });
+
     }
 
     userFormData(formvalue: any) {
