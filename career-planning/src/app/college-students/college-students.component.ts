@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ApiServiceService } from '../api-service.service';
 import { Router } from '@angular/router';
@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   templateUrl: './college-students.component.html',
   styleUrls: ['./college-students.component.css']
 })
-export class CollegeStudentsComponent implements OnInit, OnDestroy {
+export class CollegeStudentsComponent implements OnInit {
   careerform!: FormGroup;
   total1: any;
   total2: any;
@@ -33,13 +33,6 @@ export class CollegeStudentsComponent implements OnInit, OnDestroy {
       objectivec: ['', Validators.required],
       java: ['', Validators.required],
     });
-    localStorage.setItem("user", "1");
-    let val = localStorage.getItem("user");
-    console.log(val);
-  }
-  ngOnDestroy(): void {
-    localStorage.removeItem("user");
-
   }
   career(Formvalue: any) {
     console.log(Formvalue);
